@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Shrikhand&display=swap');
+
+* {
+    margin: 0;
+    padding:0;
+}
+
+$primary-color: #9356DC;
+$secondary-color: #FF79DA;
+$tertiary: #99E2D0;
+
+@mixin flexbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    width: 100%;
+    height: auto;
+    // background-color: aqua;
+    .logo {
+        margin: 20px auto;
+        height: 30px;
+        width: auto;
+        // background-color: bisque;
+    }
+}
