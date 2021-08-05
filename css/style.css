@@ -2,6 +2,11 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
 }
 
 header {
@@ -9,9 +14,44 @@ header {
   height: auto;
 }
 header .logo {
-  margin: 20px auto;
-  height: 30px;
-  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+header .logo img {
+  height: 40px;
+  margin: 30px auto 20px auto;
+}
+header .location {
+  background-color: #EAEAEA;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  box-shadow: inset 0px 7px 10px -10px #353535;
+}
+header .location i, header .location p {
+  font-size: 1.3rem;
+}
+header .location i {
+  margin-right: 15px;
+}
+@media screen and (min-width: 768px) {
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+.intro {
+  height: auto;
+  padding: 50px;
+  background-color: #f6f6f6;
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,28 +1,63 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Shrikhand&display=swap');
 
-* {
-    margin: 0;
-    padding:0;
-}
 
 $primary-color: #9356DC;
 $secondary-color: #FF79DA;
 $tertiary: #99E2D0;
+$bright-gray: #EAEAEA;
+$white-smook: #f6f6f6;
+$night-rider: #353535;
+$white: #fff;
 
 @mixin flexbox {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+}
+
+* {
+    margin: 0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
 }
 
 header {
     width: 100%;
     height: auto;
-    // background-color: aqua;
+   
     .logo {
-        margin: 20px auto;
-        height: 30px;
-        width: auto;
-        // background-color: bisque;
+         @include flexbox;
+
+         img {
+             height: 40px;
+             margin: 30px auto 20px auto;
+         }
     }
+    .location {
+        background-color: $bright-gray;
+        height: 70px;
+        @include flexbox;
+        box-shadow: inset 0px 7px 10px -10px $night-rider;
+        i, p{
+            font-size: 1.3rem;
+        }
+        i {
+            margin-right: 15px;
+        }
+    }
+    @media screen and (min-width:768px) {
+         @include flexbox;
+    }
+}
+
+.intro {
+    height: auto;
+    padding: 50px;
+    background-color: $white-smook;
+    text-align: center;
 }
