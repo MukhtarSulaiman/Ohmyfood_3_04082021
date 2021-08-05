@@ -8,6 +8,7 @@ $bright-gray: #EAEAEA;
 $white-smook: #f6f6f6;
 $night-rider: #353535;
 $white: #fff;
+$box-shadow-color: #bbb;
 
 @mixin flexbox {
     display: flex;
@@ -70,9 +71,12 @@ header {
     border-radius: 30px;
     font-weight: 500;
     border: none;
-    background: linear-gradient(to bottom, #FF79DA, #9356DC);
+    background: linear-gradient(to bottom, $secondary-color, $primary-color);
     color: $white;
     font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0px 5px 10px $box-shadow-color;
+    
 }
 
 .intro {
@@ -90,5 +94,8 @@ header {
     }
     button {
         @include btn;
+        &:hover {
+            background: linear-gradient(to bottom, lighten($secondary-color, 5%), lighten($primary-color, 5%));
+        }
     }
 }
