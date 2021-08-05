@@ -34,17 +34,17 @@ header {
          @include flexbox;
 
          img {
-             height: 40px;
-             margin: 30px auto 20px auto;
+             height: 35px;
+             margin: 25px auto 15px auto;
          }
     }
     .location {
         background-color: $bright-gray;
-        height: 70px;
+        height: 60px;
         @include flexbox;
         box-shadow: inset 0px 7px 10px -10px $night-rider;
         i, p{
-            font-size: 1.3rem;
+            font-size: 1.2rem;
         }
         i {
             margin-right: 15px;
@@ -52,12 +52,43 @@ header {
     }
     @media screen and (min-width:768px) {
          @include flexbox;
+         .logo {
+             width: 50%;
+            //  img {
+            //      float: left;;
+            //  }
+         }
+         .location {
+             width: 50%;
+         }
     }
+
+}
+
+@mixin btn {
+    padding: 18px;
+    border-radius: 30px;
+    font-weight: 500;
+    border: none;
+    background: linear-gradient(to bottom, #FF79DA, #9356DC);
+    color: $white;
+    font-size: 1rem;
 }
 
 .intro {
     height: auto;
-    padding: 50px;
+    padding: 40px 40px 55px 40px;
     background-color: $white-smook;
     text-align: center;
+    h1 {
+        font-size: 1.6rem;
+    }
+    p {
+        margin: 15px 0 30px 0;
+        font-size: 1.1rem;
+        font-weight: 200;
+    }
+    button {
+        @include btn;
+    }
 }
