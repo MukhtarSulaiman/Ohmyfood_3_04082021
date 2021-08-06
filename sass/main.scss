@@ -184,12 +184,54 @@ $padding-sec: 3rem  2rem 4rem 2rem;;
 #restaurants {
     background: $white-smook;
     padding: $padding-sec;
+   
     .wrapper{
         margin-top: 25px;
+        .restaurant-list-group {
+            color: $black;
+            height: 290px;
+            background: $white;
+            margin-bottom: 25px;
+            border-radius: 15px;
+        }
         img {
-            width: 86vw;
-            height: 220px;
+            width: 100%;
+            height: 205px;
             object-fit: cover;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            object-position: 50% 65%;
+        }
+        .restaurant-details {
+            padding: 15px;
+            position: relative;
+            p {
+                margin-top: 5px;
+                font-size: 1.1rem;
+                font-weight: 300;
+            }
+            i {
+                position: absolute;
+                font-size: 1.5rem;
+                right: 20px;
+               top: 20px;
+               &:hover {
+                //    review these lines of code !
+                    background: linear-gradient(to bottom, $primary-color, $secondary-color);
+                    background-clip: border-box;
+                    -webkit-text-fill-color: transparent;
+               }
+            }
+
+            small {
+                position: absolute;
+                background: $tertiary-color;
+                padding: 12px;
+                right: 10px;
+                top: -200px;
+                color: darken($tertiary-color, 35%);
+                font-weight: bold;
+            }
         }
     }
 }
