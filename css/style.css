@@ -9,6 +9,10 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* header section */
 header {
   width: 100%;
@@ -18,11 +22,10 @@ header .logo {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  height: 70px;
 }
 header .logo img {
   height: 35px;
-  margin: 25px auto 15px auto;
 }
 header .location {
   background-color: #EAEAEA;
@@ -30,7 +33,6 @@ header .location {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
   box-shadow: inset 0px 7px 10px -10px #353535;
 }
 header .location i, header .location p {
@@ -44,10 +46,13 @@ header .location i {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
   }
   header .logo {
     width: 50%;
+    justify-content: flex-start;
+  }
+  header .logo img {
+    margin-left: 4rem;
   }
   header .location {
     width: 50%;
@@ -86,11 +91,83 @@ header .location i {
   box-shadow: 0px 5px 10px #bbb;
   transition: background 500ms, box-shadow 500ms;
 }
+/* padding sections: Fonctionnement and Restaurants*/
 /* Fonctionnememnt section */
 #fonctionnement-sec {
   width: 100%;
   height: auto;
-  padding: 3rem 1.5rem 4rem 1.5rem;
+  padding: 3rem 2rem 4rem 2rem;
+}
+#fonctionnement-sec .operation-list-group {
+  background: #f6f6f6;
+  margin-top: 25px;
+  height: 80px;
+  border-radius: 25px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 5px 18px -7px #bbb;
+}
+#fonctionnement-sec .operation-list-group span {
+  position: absolute;
+  left: -12px;
+  width: 25px;
+  height: 25px;
+  background: #9356DC;
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#fonctionnement-sec .operation-list-group i {
+  color: #686868;
+  font-size: 20px;
+  position: absolute;
+  left: 10%;
+}
+#fonctionnement-sec .operation-list-group p {
+  color: #000;
+  font-weight: 500;
+}
+#fonctionnement-sec .last-operation-list-group {
+  background: #f2eafb;
+}
+#fonctionnement-sec .last-operation-list-group .icon-primary-color {
+  color: #9356DC;
+}
+@media screen and (min-width: 768px) {
+  #fonctionnement-sec {
+    padding: 3rem 4rem 4rem 4rem;
+  }
+}
+@media screen and (min-width: 900px) {
+  #fonctionnement-sec .wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  #fonctionnement-sec .operation-list-group {
+    width: 27vw;
+  }
+  #fonctionnement-sec p {
+    margin-left: 30px;
+  }
+}
+
+/*  Restaurants Section */
+#restaurants {
+  background: #f6f6f6;
+  padding: 3rem 2rem 4rem 2rem;
+}
+#restaurants .wrapper {
+  margin-top: 25px;
+}
+#restaurants .wrapper img {
+  width: 86vw;
+  height: 220px;
+  object-fit: cover;
 }
 
 /*# sourceMappingURL=style.css.map */

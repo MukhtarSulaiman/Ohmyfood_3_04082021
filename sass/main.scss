@@ -3,18 +3,20 @@
 
 $primary-color: #9356DC;
 $secondary-color: #FF79DA;
-$tertiary: #99E2D0;
+$tertiary-color: #99E2D0;
 $bright-gray: #EAEAEA;
 $white-smook: #f6f6f6;
 $night-rider: #353535;
-$white: #fff;
 $box-shadow-color: #bbb;
+$white: #fff;
+$black: #000;
+
 
 @mixin flexbox {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    // width: 100%;
 }
 
 * {
@@ -27,6 +29,10 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+a {
+    text-decoration: none;
+}
+
 /* header section */
 
 header {
@@ -35,10 +41,10 @@ header {
    
     .logo {
          @include flexbox;
+         height: 70px;
 
          img {
              height: 35px;
-             margin: 25px auto 15px auto;
          }
     }
     .location {
@@ -57,9 +63,10 @@ header {
          @include flexbox;
          .logo {
              width: 50%;
-            //  img {
-            //      float: left;;
-            //  }
+             justify-content: flex-start;
+             img {
+                 margin-left: 4rem;
+             }
          }
          .location {
              width: 50%;
@@ -110,10 +117,79 @@ header {
     }
 }
 
+/* padding sections: Fonctionnement and Restaurants*/
+$padding-sec: 3rem  2rem 4rem 2rem;;
 /* Fonctionnememnt section */
 
 #fonctionnement-sec {
     width: 100%;
     height: auto;
-    padding: 3rem  1.5rem 4rem 1.5rem;
+    padding: $padding-sec;
+    .operation-list-group {
+        background: $white-smook;
+        margin-top: 25px;
+        height: 80px;
+        border-radius: 25px;
+        position: relative;
+        @include flexbox;
+        box-shadow: 0px 5px 18px -7px $box-shadow-color;
+        span {
+            position: absolute;
+            left: -12px;
+            width: 25px;
+            height: 25px;
+            background: $primary-color;
+            border-radius: 50%;
+            color: $white;
+            @include flexbox;
+        }
+        i {
+            color: lighten($night-rider, 20%);
+            font-size: 20px;
+            position: absolute;
+            left: 10%;
+        }
+        p {
+            color: $black;
+            font-weight: 500;
+        }
+
+    }
+    .last-operation-list-group {
+        background: lighten($primary-color, 35%);
+        .icon-primary-color {
+            color: $primary-color;
+        }
+    }
+    @media screen and (min-width:768px) {
+        padding: 3rem  4rem 4rem 4rem;
+    }
+    @media screen and (min-width:900px) {
+        .wrapper{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .operation-list-group {
+            width: 27vw;
+        }
+        p {
+            margin-left: 30px
+        }
+    }
+}
+
+/*  Restaurants Section */
+
+#restaurants {
+    background: $white-smook;
+    padding: $padding-sec;
+    .wrapper{
+        margin-top: 25px;
+        img {
+            width: 86vw;
+            height: 220px;
+            object-fit: cover;
+        }
+    }
 }
