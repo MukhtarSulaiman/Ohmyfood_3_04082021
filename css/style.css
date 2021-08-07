@@ -18,13 +18,13 @@ header {
   width: 100%;
   height: auto;
 }
-header .logo {
+header #logo {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 70px;
 }
-header .logo img {
+header #logo img {
   height: 35px;
 }
 header .location {
@@ -47,11 +47,11 @@ header .location i {
     justify-content: center;
     align-items: center;
   }
-  header .logo {
+  header #logo {
     width: 50%;
     justify-content: flex-start;
   }
-  header .logo img {
+  header #logo img {
     margin-left: 4rem;
   }
   header .location {
@@ -60,10 +60,11 @@ header .location i {
 }
 
 #intro-sec button:hover {
-  background: linear-gradient(to bottom, #ff93e1, #a16be0);
+  background: linear-gradient(to top, #a16be0, #ff93e1);
   box-shadow: 0px 5px 10px #888888;
 }
 
+/* padding sections: Fonctionnement and Restaurants*/
 /* header section */
 #intro-sec {
   height: auto;
@@ -84,14 +85,13 @@ header .location i {
   border-radius: 30px;
   font-weight: 500;
   border: none;
-  background: linear-gradient(to bottom, #FF79DA, #9356DC);
+  background: linear-gradient(to top, #9356DC, #FF79DA);
   color: #fff;
   font-size: 1rem;
   cursor: pointer;
   box-shadow: 0px 5px 10px #bbb;
-  transition: background 500ms, box-shadow 500ms;
+  transition: background 900ms, box-shadow 500ms;
 }
-/* padding sections: Fonctionnement and Restaurants*/
 /* Fonctionnememnt section */
 #fonctionnement-sec {
   width: 100%;
@@ -104,10 +104,10 @@ header .location i {
   height: 80px;
   border-radius: 25px;
   position: relative;
+  box-shadow: 0px 5px 18px -7px #bbb;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0px 5px 18px -7px #bbb;
 }
 #fonctionnement-sec .operation-list-group span {
   position: absolute;
@@ -157,6 +157,11 @@ header .location i {
 }
 
 /*  Restaurants Section */
+@keyframes scale {
+  40% {
+    transform: scale(1.2);
+  }
+}
 #restaurants {
   background: #f6f6f6;
   padding: 3rem 2rem 4rem 2rem;
@@ -188,16 +193,20 @@ header .location i {
   font-size: 1.1rem;
   font-weight: 300;
 }
-#restaurants .wrapper .restaurant-details i {
+#restaurants .wrapper .restaurant-details .far {
   position: absolute;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   right: 20px;
   top: 20px;
 }
-#restaurants .wrapper .restaurant-details i:hover {
-  background: linear-gradient(to bottom, #9356DC, #FF79DA);
-  background-clip: border-box;
-  -webkit-text-fill-color: transparent;
+#restaurants .wrapper .restaurant-details .far:active {
+  background: -webkit-linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  font-weight: 600;
+  color: transparent;
+  animation: scale 1s forwards;
 }
 #restaurants .wrapper .restaurant-details small {
   position: absolute;
@@ -207,6 +216,72 @@ header .location i {
   top: -200px;
   color: #2c9c81;
   font-weight: bold;
+}
+@media screen and (min-width: 768px) {
+  #restaurants {
+    padding: 3rem 4rem 4rem 4rem;
+  }
+  #restaurants .wrapper {
+    display: grid;
+    width: 100%;
+    height: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 25px;
+  }
+  #restaurants .wrapper .restaurant-list-group {
+    margin-bottom: 0px;
+  }
+  #restaurants .wrapper .restaurant-list-group .far:hover {
+    background: -webkit-linear-gradient(#9356DC, #FF79DA);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    font-weight: 600;
+    color: transparent;
+    animation: scale 1s forwards;
+  }
+}
+
+footer {
+  background-color: #353535;
+  padding: 1.8rem;
+  font-size: 1rem;
+  font-weight: normal;
+}
+footer img {
+  height: 20px;
+  margin-bottom: 20px;
+}
+footer .footer-list {
+  padding-bottom: 10px;
+}
+footer .footer-list a {
+  color: #fff;
+  font-style: normal;
+}
+footer .footer-list a:hover {
+  text-decoration: underline;
+}
+footer .footer-list .fas {
+  margin-right: 7px;
+  font-size: 0.7rem;
+}
+@media screen and (min-width: 410px) {
+  footer .wrapper {
+    width: 100%;
+    display: grid;
+    grid-template: repeat(2, 50%)/repeat(2, 50%);
+  }
+}
+@media screen and (min-width: 768px) {
+  footer {
+    padding: 3rem 4rem 4rem 4rem;
+  }
+  footer .wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

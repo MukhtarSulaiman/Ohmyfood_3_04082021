@@ -12,11 +12,16 @@ $white: #fff;
 $black: #000;
 
 
-@mixin flexbox {
+@mixin flexbox1 {
     display: flex;
     justify-content: center;
     align-items: center;
     // width: 100%;
+}
+
+@mixin flexbox2 {
+    display: flex;
+    justify-content: space-between;
 }
 
 * {
@@ -39,8 +44,8 @@ header {
     width: 100%;
     height: auto;
    
-    .logo {
-         @include flexbox;
+    #logo {
+         @include flexbox1;
          height: 70px;
 
          img {
@@ -50,7 +55,7 @@ header {
     .location {
         background-color: $bright-gray;
         height: 60px;
-        @include flexbox;
+        @include flexbox1;
         box-shadow: inset 0px 7px 10px -10px $night-rider;
         i, p{
             font-size: 1.2rem;
@@ -60,8 +65,8 @@ header {
         }
     }
     @media screen and (min-width:768px) {
-         @include flexbox;
-         .logo {
+         @include flexbox1;
+         #logo {
              width: 50%;
              justify-content: flex-start;
              img {
@@ -81,18 +86,22 @@ header {
     border-radius: 30px;
     font-weight: 500;
     border: none;
-    background: linear-gradient(to bottom, $secondary-color, $primary-color);
+    background: linear-gradient(to top, $primary-color, $secondary-color);
     color: $white;
     font-size: 1rem;
     cursor: pointer;
     box-shadow: 0px 5px 10px $box-shadow-color;
-    transition: background 500ms, box-shadow 500ms;
+    transition: background 900ms, box-shadow 500ms;
 }
 
 %hover {
-    background: linear-gradient(to bottom, lighten($secondary-color, 5%), lighten($primary-color, 5%));
+    background: linear-gradient(to top, lighten($primary-color, 5%), lighten($secondary-color, 5%));
     box-shadow: 0px 5px 10px darken($box-shadow-color, 20%);
 }
+
+/* padding sections: Fonctionnement and Restaurants*/
+$padding-sec-under-768: 3rem  2rem 4rem 2rem;
+$padding-sec-above-768: 3rem  4rem 4rem 4rem;
 
 /* header section */
 
@@ -117,22 +126,20 @@ header {
     }
 }
 
-/* padding sections: Fonctionnement and Restaurants*/
-$padding-sec: 3rem  2rem 4rem 2rem;;
 /* Fonctionnememnt section */
 
 #fonctionnement-sec {
     width: 100%;
     height: auto;
-    padding: $padding-sec;
+    padding: $padding-sec-under-768;
     .operation-list-group {
         background: $white-smook;
         margin-top: 25px;
         height: 80px;
         border-radius: 25px;
         position: relative;
-        @include flexbox;
         box-shadow: 0px 5px 18px -7px $box-shadow-color;
+        @include flexbox1;
         span {
             position: absolute;
             left: -12px;
@@ -141,7 +148,7 @@ $padding-sec: 3rem  2rem 4rem 2rem;;
             background: $primary-color;
             border-radius: 50%;
             color: $white;
-            @include flexbox;
+            @include flexbox1;
         }
         i {
             color: lighten($night-rider, 20%);
@@ -153,7 +160,6 @@ $padding-sec: 3rem  2rem 4rem 2rem;;
             color: $black;
             font-weight: 500;
         }
-
     }
     .last-operation-list-group {
         background: lighten($primary-color, 35%);
@@ -162,13 +168,12 @@ $padding-sec: 3rem  2rem 4rem 2rem;;
         }
     }
     @media screen and (min-width:768px) {
-        padding: 3rem  4rem 4rem 4rem;
+        padding: $padding-sec-above-768;
     }
     @media screen and (min-width:900px) {
         .wrapper{
             width: 100%;
-            display: flex;
-            justify-content: space-between;
+            @include flexbox2;
         }
         .operation-list-group {
             width: 27vw;
@@ -180,10 +185,25 @@ $padding-sec: 3rem  2rem 4rem 2rem;;
 }
 
 /*  Restaurants Section */
+@mixin pseudoclass {
+    background: -webkit-linear-gradient($primary-color, $secondary-color);              
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    font-weight: 600;
+    color: transparent;
+    animation: scale 1s forwards;
+    }
+    @keyframes scale {
+    40% {
+        transform:scale(1.2);                       
+    }
+}          
+
 
 #restaurants {
     background: $white-smook;
-    padding: $padding-sec;
+    padding: $padding-sec-under-768;
    
     .wrapper{
         margin-top: 25px;
@@ -210,19 +230,15 @@ $padding-sec: 3rem  2rem 4rem 2rem;;
                 font-size: 1.1rem;
                 font-weight: 300;
             }
-            i {
+            .far {
                 position: absolute;
-                font-size: 1.5rem;
+                font-size: 1.6rem;
                 right: 20px;
-               top: 20px;
-               &:hover {
-                //    review these lines of code !
-                    background: linear-gradient(to bottom, $primary-color, $secondary-color);
-                    background-clip: border-box;
-                    -webkit-text-fill-color: transparent;
-               }
+                top: 20px;             
+                &:active {                 
+                    @include pseudoclass;
+               }          
             }
-
             small {
                 position: absolute;
                 background: $tertiary-color;
@@ -232,6 +248,64 @@ $padding-sec: 3rem  2rem 4rem 2rem;;
                 color: darken($tertiary-color, 35%);
                 font-weight: bold;
             }
+        }
+    }
+    @media screen and (min-width: 768px) {
+        padding: $padding-sec-above-768;
+        .wrapper {
+            display: grid;
+            width: 100%;
+            height: auto;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-gap: 25px;
+            .restaurant-list-group {
+                margin-bottom: 0px;
+                .far:hover {
+                    @include pseudoclass;
+                }
+            }
+        }
+    }
+}
+
+// footer section
+
+footer {
+    background-color: $night-rider;
+    padding: 1.8rem;
+    font-size: 1rem;
+    font-weight: normal;
+    img {
+      height: 20px;
+      margin-bottom: 20px;
+    }
+    .footer-list {
+        padding-bottom: 10px;
+        a {
+            color:$white;
+            font-style: normal;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        .fas {
+            margin-right: 7px;
+            font-size: 0.7rem;
+        }
+    }
+
+    @media screen and (min-width:410px) {
+        .wrapper {
+            width: 100%;
+            display: grid;
+            grid-template: repeat(2, 50%) / repeat(2, 50%);
+        }
+    }
+    @media screen and (min-width: 768px) {
+        padding: $padding-sec-above-768;
+        .wrapper {
+            @include flexbox2;
         }
     }
 }
