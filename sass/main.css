@@ -75,12 +75,6 @@ header .location i {
   }
   header #logo {
     width: 50%;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-  }
-  header #logo img {
-    margin-left: 4rem;
   }
   header .location {
     width: 50%;
@@ -382,5 +376,12 @@ footer .footer-list .fas {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
+}
+
+.fa-arrow-left {
+  position: absolute;
+  left: 40px;
+  top: 25px;
+  font-size: 1.2rem;
 }
 /*# sourceMappingURL=main.css.map */

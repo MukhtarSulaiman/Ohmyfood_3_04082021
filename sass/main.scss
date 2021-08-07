@@ -68,10 +68,10 @@ header {
          @include flexbox1;
          #logo {
              width: 50%;
-             justify-content: flex-start;
-             img {
-                 margin-left: 4rem;
-             }
+            //  justify-content: flex-start;
+            //  img {
+            //      margin-left: 4rem;
+            //  }
          }
          .location {
              width: 50%;
@@ -308,4 +308,17 @@ footer {
             @include flexbox2;
         }
     }
+}
+
+// Page lapalette
+
+@mixin arrow-left {
+    position: absolute;
+    left: 40px;
+    top: 25px;
+    font-size: 1.2rem;
+}
+
+.fa-arrow-left {
+    @include arrow-left;
 }
