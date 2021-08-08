@@ -14,6 +14,27 @@ a {
   text-decoration: none;
 }
 
+#intro-sec button:hover {
+  background: -webkit-gradient(linear, left bottom, left top, from(#a16be0), to(#ff93e1));
+  background: linear-gradient(to top, #a16be0, #ff93e1);
+  -webkit-box-shadow: 0px 5px 10px #888888;
+          box-shadow: 0px 5px 10px #888888;
+}
+
+/* padding sections: Fonctionnement and Restaurants*/
+@-webkit-keyframes scale {
+  40% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+@keyframes scale {
+  40% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+
 /* header section */
 header {
   width: 100%;
@@ -81,14 +102,6 @@ header .location i {
   }
 }
 
-#intro-sec button:hover {
-  background: -webkit-gradient(linear, left bottom, left top, from(#a16be0), to(#ff93e1));
-  background: linear-gradient(to top, #a16be0, #ff93e1);
-  -webkit-box-shadow: 0px 5px 10px #888888;
-          box-shadow: 0px 5px 10px #888888;
-}
-
-/* padding sections: Fonctionnement and Restaurants*/
 /* header section */
 #intro-sec {
   height: auto;
@@ -205,6 +218,9 @@ header .location i {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    -webkit-box-align: initial;
+        -ms-flex-align: initial;
+            align-items: initial;
   }
   #fonctionnement-sec .operation-list-group {
     width: 27vw;
@@ -215,19 +231,6 @@ header .location i {
 }
 
 /*  Restaurants Section */
-@-webkit-keyframes scale {
-  40% {
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
-  }
-}
-@keyframes scale {
-  40% {
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
-  }
-}
-
 #restaurants {
   background: #f6f6f6;
   padding: 3rem 2rem 4rem 2rem;
@@ -267,14 +270,14 @@ header .location i {
   font-weight: 300;
 }
 
-#restaurants .wrapper .restaurant-details .far {
+#restaurants .wrapper .restaurant-details .fa-heart {
   position: absolute;
   font-size: 1.6rem;
   right: 20px;
   top: 20px;
 }
 
-#restaurants .wrapper .restaurant-details .far:active {
+#restaurants .wrapper .restaurant-details .fa-heart:active {
   background: -webkit-linear-gradient(#9356DC, #FF79DA);
   -webkit-background-clip: text;
   background-clip: text;
@@ -312,7 +315,7 @@ header .location i {
   #restaurants .wrapper .restaurant-list-group {
     margin-bottom: 0px;
   }
-  #restaurants .wrapper .restaurant-list-group .far:hover {
+  #restaurants .wrapper .restaurant-list-group .fa-heart:hover {
     background: -webkit-linear-gradient(#9356DC, #FF79DA);
     -webkit-background-clip: text;
     background-clip: text;
@@ -375,6 +378,9 @@ footer .footer-list .fas {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    -webkit-box-align: initial;
+        -ms-flex-align: initial;
+            align-items: initial;
   }
 }
 
@@ -383,5 +389,48 @@ footer .footer-list .fas {
   left: 40px;
   top: 25px;
   font-size: 1.2rem;
+  color: #000;
+}
+
+#main-page {
+  position: relative;
+}
+
+#main-page img {
+  width: 100%;
+  height: 270px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#main-page #container-lapalettedugout {
+  width: 100%;
+  background-color: #f6f6f6;
+  padding: 30px 20px 40px;
+  border-top-left-radius: 35px;
+  border-top-right-radius: 35px;
+  position: absolute;
+  top: 220px;
+}
+
+#main-page #container-lapalettedugout #restaurant-name {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#main-page #container-lapalettedugout #restaurant-name h1 {
+  font-family: 'shrikhand', cursive;
+  font-size: 1.7rem;
+}
+
+#main-page #container-lapalettedugout #restaurant-name .fa-heart {
+  font-size: 1.6rem;
 }
 /*# sourceMappingURL=main.css.map */
