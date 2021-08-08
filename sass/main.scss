@@ -1,29 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Shrikhand&display=swap');
 
-
-$primary-color: #9356DC;
-$secondary-color: #FF79DA;
-$tertiary-color: #99E2D0;
-$bright-gray: #EAEAEA;
-$white-smook: #f6f6f6;
-$night-rider: #353535;
-$box-shadow-color: #bbb;
-$white: #fff;
-$black: #000;
-
-
-@mixin flexbox1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    // width: 100%;
-}
-
-@mixin flexbox2 {
-    display: flex;
-    justify-content: space-between;
-}
-
 * {
     margin: 0;
     padding:0;
@@ -38,46 +14,24 @@ a {
     text-decoration: none;
 }
 
-/* header section */
+// Sass
 
-header {
-    width: 100%;
-    height: auto;
-   
-    #logo {
-         @include flexbox1;
-         height: 70px;
+$primary-color: #9356DC;
+$secondary-color: #FF79DA;
+$tertiary-color: #99E2D0;
+$bright-gray: #EAEAEA;
+$white-smook: #f6f6f6;
+$night-rider: #353535;
+$box-shadow-color: #bbb;
+$white: #fff;
+$black: #000;
 
-         img {
-             height: 35px;
-         }
-    }
-    .location {
-        background-color: $bright-gray;
-        height: 60px;
-        @include flexbox1;
-        box-shadow: inset 0px 7px 10px -10px $night-rider;
-        i, p{
-            font-size: 1.2rem;
-        }
-        i {
-            margin-right: 15px;
-        }
-    }
-    @media screen and (min-width:768px) {
-         @include flexbox1;
-         #logo {
-             width: 50%;
-            //  justify-content: flex-start;
-            //  img {
-            //      margin-left: 4rem;
-            //  }
-         }
-         .location {
-             width: 50%;
-         }
-    }
 
+@mixin flexbox($justify-content: center, $align-items:center) {
+    display: flex;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    // width: 100%;
 }
 
 
@@ -102,6 +56,72 @@ header {
 /* padding sections: Fonctionnement and Restaurants*/
 $padding-sec-under-768: 3rem  2rem 4rem 2rem;
 $padding-sec-above-768: 3rem  4rem 4rem 4rem;
+
+@mixin pseudoclass {
+    background: -webkit-linear-gradient($primary-color, $secondary-color);              
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    font-weight: 600;
+    color: transparent;
+    animation: scale 1s forwards;
+    }
+    @keyframes scale {
+    40% {
+        transform:scale(1.2);                       
+    }
+} 
+
+@mixin arrow-left {
+    position: absolute;
+    left: 40px;
+    top: 25px;
+    font-size: 1.2rem;
+    color: $black;
+}
+
+/* header section */
+
+header {
+    width: 100%;
+    height: auto;
+   
+    #logo {
+         @include flexbox;
+         height: 70px;
+
+         img {
+             height: 35px;
+         }
+    }
+    .location {
+        background-color: $bright-gray;
+        height: 60px;
+        @include flexbox(center, center);
+        box-shadow: inset 0px 7px 10px -10px $night-rider;
+        i, p{
+            font-size: 1.2rem;
+        }
+        i {
+            margin-right: 15px;
+        }
+    }
+    @media screen and (min-width:768px) {
+         @include flexbox;
+         #logo {
+             width: 50%;
+            //  justify-content: flex-start;
+            //  img {
+            //      margin-left: 4rem;
+            //  }
+         }
+         .location {
+             width: 50%;
+         }
+    }
+
+}
+
 
 /* header section */
 
@@ -139,16 +159,16 @@ $padding-sec-above-768: 3rem  4rem 4rem 4rem;
         border-radius: 25px;
         position: relative;
         box-shadow: 0px 5px 18px -7px $box-shadow-color;
-        @include flexbox1;
+        @include flexbox;
         span {
             position: absolute;
             left: -12px;
             width: 25px;
-            height: 25px;
+           height: 25px;
             background: $primary-color;
             border-radius: 50%;
             color: $white;
-            @include flexbox1;
+            @include flexbox;
         }
         i {
             color: lighten($night-rider, 20%);
@@ -173,7 +193,7 @@ $padding-sec-above-768: 3rem  4rem 4rem 4rem;
     @media screen and (min-width:900px) {
         .wrapper{
             width: 100%;
-            @include flexbox2;
+            @include flexbox(space-between,initial);
         }
         .operation-list-group {
             width: 27vw;
@@ -184,22 +204,7 @@ $padding-sec-above-768: 3rem  4rem 4rem 4rem;
     }
 }
 
-/*  Restaurants Section */
-@mixin pseudoclass {
-    background: -webkit-linear-gradient($primary-color, $secondary-color);              
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    background-clip: text;
-    font-weight: 600;
-    color: transparent;
-    animation: scale 1s forwards;
-    }
-    @keyframes scale {
-    40% {
-        transform:scale(1.2);                       
-    }
-}          
-
+/*  Restaurants Section */ 
 
 #restaurants {
     background: $white-smook;
@@ -230,7 +235,7 @@ $padding-sec-above-768: 3rem  4rem 4rem 4rem;
                 font-size: 1.1rem;
                 font-weight: 300;
             }
-            .far {
+            .fa-heart {
                 position: absolute;
                 font-size: 1.6rem;
                 right: 20px;
@@ -261,7 +266,7 @@ $padding-sec-above-768: 3rem  4rem 4rem 4rem;
             grid-gap: 25px;
             .restaurant-list-group {
                 margin-bottom: 0px;
-                .far:hover {
+                .fa-heart:hover {
                     @include pseudoclass;
                 }
             }
@@ -305,20 +310,47 @@ footer {
     @media screen and (min-width: 768px) {
         padding: $padding-sec-above-768;
         .wrapper {
-            @include flexbox2;
+            @include flexbox(space-between, initial);
         }
     }
 }
 
-// Page lapalette
 
-@mixin arrow-left {
-    position: absolute;
-    left: 40px;
-    top: 25px;
-    font-size: 1.2rem;
-}
+// Page lapalettedugout
 
 .fa-arrow-left {
     @include arrow-left;
+}
+
+#main-page{
+    position: relative;
+    img {
+        width: 100%;
+        height: 270px;
+        object-fit: cover;
+    }
+    #container-lapalettedugout {
+        width: 100%;
+        background-color: $white-smook;
+        padding: 30px 20px 40px;
+        border-top-left-radius: 35px;
+        border-top-right-radius: 35px;
+        position: absolute;
+        top: 220px;
+        #restaurant-name {
+            width: 100%;
+            @include flexbox(space-around,);
+            // background-color: yellow;
+            h1 {
+            font-family: 'shrikhand', cursive;
+            font-size: 1.7rem;
+            }
+            .fa-heart {
+                // position: absolute;
+                // right: 45px;
+                // top:38px;
+                font-size: 1.6rem;
+            }
+        }
+    }
 }
