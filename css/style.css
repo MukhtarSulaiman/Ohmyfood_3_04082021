@@ -289,6 +289,45 @@ header .location i {
   color: transparent;
   animation: scale 1s forwards;
 }
+#main-container main #entrees {
+  animation: fadein 800ms, width 800ms;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+    width: 0%;
+  }
+  to {
+    opacity: 1;
+    width: 100%;
+  }
+}
+#main-container main #plats {
+  animation: fadein 800ms 200ms, width 800ms 200ms;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+    width: 0%;
+  }
+  to {
+    opacity: 1;
+    width: 100%;
+  }
+}
+#main-container main #desserts {
+  animation: fadein 800ms 400ms, width 800ms 400ms;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+    width: 0%;
+  }
+  to {
+    opacity: 1;
+    width: 100%;
+  }
+}
 #main-container main h2 {
   margin-top: 35px;
   text-transform: uppercase;
@@ -369,7 +408,8 @@ header .location i {
 #main-container main .card:active strong {
   transform: translateX(-60px);
 }
-#main-container main .card:active h3, #main-container main .card:active p {
+#main-container main .card:active h3,
+#main-container main .card:active p {
   width: 70%;
 }
 #main-container main .btn-container {
@@ -411,7 +451,8 @@ header .location i {
   #main-container .card:hover strong {
     transform: translateX(-60px);
   }
-  #main-container .card:hover h3, #main-container .card:hover p {
+  #main-container .card:hover h3,
+#main-container .card:hover p {
     width: 70%;
   }
   #main-container .fa-heart:hover {
