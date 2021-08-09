@@ -1,445 +1,478 @@
+/** @format */
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Shrikhand&display=swap');
 
 * {
-    margin: 0;
-    padding:0;
-    box-sizing:border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
 
 a {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 // Sass
 
-$primary-color: #9356DC;
-$secondary-color: #FF79DA;
-$tertiary-color: #99E2D0;
-$bright-gray: #EAEAEA;
+$primary-color: #9356dc;
+$secondary-color: #ff79da;
+$tertiary-color: #99e2d0;
+$bright-gray: #eaeaea;
 $white-smook: #f6f6f6;
 $night-rider: #353535;
 $box-shadow-color: #bbb;
 $white: #fff;
 $black: #000;
 
-
-@mixin flexbox($justify-content: center, $align-items:center) {
-    display: flex;
-    justify-content: $justify-content;
-    align-items: $align-items;
-    // width: 100%;
+@mixin flexbox($justify-content: center, $align-items: center) {
+	display: flex;
+	justify-content: $justify-content;
+	align-items: $align-items;
+	// width: 100%;
 }
 
-
 @mixin btn {
-    padding: 18px;
-    border-radius: 30px;
-    font-weight: 500;
-    border: none;
-    background: linear-gradient(to top, $primary-color, $secondary-color);
-    color: $white;
-    font-size: 1rem;
-    cursor: pointer;
-    box-shadow: 0px 5px 10px $box-shadow-color;
-    transition: background 900ms, box-shadow 500ms;
+	padding: 18px;
+	border-radius: 30px;
+	font-weight: 500;
+	border: none;
+	background: linear-gradient(to top, $primary-color, $secondary-color);
+	color: $white;
+	font-size: 1rem;
+	cursor: pointer;
+	box-shadow: 0px 5px 10px $box-shadow-color;
+	transition: background 900ms, box-shadow 500ms;
 }
 
 %hover {
-    background: linear-gradient(to top, lighten($primary-color, 5%), lighten($secondary-color, 5%));
-    box-shadow: 0px 5px 10px darken($box-shadow-color, 20%);
+	background: linear-gradient(to top, lighten($primary-color, 5%),
+	lighten($secondary-color, 5%));
+	box-shadow: 0px 5px 10px darken($box-shadow-color, 20%);
 }
 
 /* padding sections: Fonctionnement and Restaurants*/
-$padding-sec-under-768: 3rem  2rem 4rem 2rem;
-$padding-sec-above-768: 3rem  4rem 4rem 4rem;
+$padding-sec-under-768: 3rem 2rem 4rem 2rem;
+$padding-sec-above-768: 3rem 4rem 4rem 4rem;
 
 @mixin heart-active-hover {
-    background: -webkit-linear-gradient($primary-color, $secondary-color);              
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    background-clip: text;
-    font-weight: 600;
-    color: transparent;
-    animation: scale 1s forwards;
-    }
-    @keyframes scale {
-    40% {
-        transform:scale(1.2);                       
-    }
-} 
+	background: -webkit-linear-gradient($primary-color, $secondary-color);
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	background-clip: text;
+	font-weight: 600;
+	color: transparent;
+	animation: scale 1s forwards;
+}
+@keyframes scale {
+	40% {
+		transform: scale(1.2);
+	}
+}
 
 @mixin arrow-left {
-    position: absolute;
-    left: 40px;
-    top: 25px;
-    font-size: 1.2rem;
-    color: $black;
+	position: absolute;
+	left: 40px;
+	top: 25px;
+	font-size: 1.2rem;
+	color: $black;
 }
 
 /* header section */
 
 header {
-    width: 100%;
-    height: auto;
-   
-    #logo {
-         @include flexbox;
-         height: 70px;
+	width: 100%;
+	height: auto;
 
-         img {
-             height: 35px;
-         }
-    }
-    .location {
-        background-color: $bright-gray;
-        height: 60px;
-        @include flexbox(center, center);
-        box-shadow: inset 0px 7px 10px -10px $night-rider;
-        i, p{
-            font-size: 1.2rem;
-        }
-        i {
-            margin-right: 15px;
-        }
-    }
-    @media screen and (min-width:768px) {
-         @include flexbox;
-         #logo {
-             width: 50%;
-            //  justify-content: flex-start;
-            //  img {
-            //      margin-left: 4rem;
-            //  }
-         }
-         .location {
-             width: 50%;
-         }
-    }
-
+	#logo {
+		@include flexbox;
+		height: 70px;
+		img {
+			height: 35px;
+		}
+	}
+	.location {
+		background-color: $bright-gray;
+		height: 60px;
+		@include flexbox(center, center);
+		box-shadow: inset 0px 7px 10px -10px $night-rider;
+		i,
+		p {
+			font-size: 1.2rem;
+		}
+		i {
+			margin-right: 15px;
+		}
+	}
+	@media screen and (min-width: 768px) {
+		@include flexbox;
+		#logo {
+			width: 50%;
+		}
+		.location {
+			width: 50%;
+		}
+	}
 }
-
 
 /* header section */
 
 #intro-sec {
-    height: auto;
-    padding: 40px 40px 55px 40px;
-    background-color: $white-smook;
-    text-align: center;
-    h1 {
-        font-size: 1.6rem;
-    }
-    p {
-        margin: 15px 0 30px 0;
-        font-size: 1.1rem;
-        font-weight: 200;
-    }
-    button {
-        @include btn;
-        &:hover {
-            @extend %hover;
-        }
-    }
+	height: auto;
+	padding: 40px 40px 55px 40px;
+	background-color: $white-smook;
+	text-align: center;
+	h1 {
+		font-size: 1.6rem;
+	}
+	p {
+		margin: 15px 0 30px 0;
+		font-size: 1.1rem;
+		font-weight: 200;
+	}
+	button {
+		@include btn;
+		&:hover {
+			@extend %hover;
+		}
+	}
 }
 
 /* Fonctionnememnt section */
 
 #fonctionnement-sec {
-    width: 100%;
-    height: auto;
-    padding: $padding-sec-under-768;
-    .operation-list-group {
-        background: $white-smook;
-        margin-top: 25px;
-        height: 80px;
-        border-radius: 25px;
-        position: relative;
-        box-shadow: 0px 5px 18px -7px $box-shadow-color;
-        @include flexbox;
-        span {
-            position: absolute;
-            left: -12px;
-            width: 25px;
-           height: 25px;
-            background: $primary-color;
-            border-radius: 50%;
-            color: $white;
-            @include flexbox;
-        }
-        i {
-            color: lighten($night-rider, 20%);
-            font-size: 20px;
-            position: absolute;
-            left: 10%;
-        }
-        p {
-            color: $black;
-            font-weight: 500;
-        }
-    }
-    .last-operation-list-group {
-        background: lighten($primary-color, 35%);
-        .icon-primary-color {
-            color: $primary-color;
-        }
-    }
-    @media screen and (min-width:768px) {
-        padding: $padding-sec-above-768;
-    }
-    @media screen and (min-width:900px) {
-        .wrapper{
-            width: 100%;
-            @include flexbox(space-between,initial);
-        }
-        .operation-list-group {
-            width: 27vw;
-        }
-        p {
-            margin-left: 30px
-        }
-    }
+	width: 100%;
+	height: auto;
+	padding: $padding-sec-under-768;
+	.operation-list-group {
+		background: $white-smook;
+		margin-top: 25px;
+		height: 80px;
+		border-radius: 25px;
+		position: relative;
+		box-shadow: 0px 5px 18px -7px $box-shadow-color;
+		@include flexbox;
+		span {
+			position: absolute;
+			left: -12px;
+			width: 25px;
+			height: 25px;
+			background: $primary-color;
+			border-radius: 50%;
+			color: $white;
+			@include flexbox;
+		}
+		i {
+			color: lighten($night-rider, 20%);
+			font-size: 20px;
+			position: absolute;
+			left: 10%;
+		}
+		p {
+			color: $black;
+			font-weight: 500;
+		}
+	}
+	.last-operation-list-group {
+		background: lighten($primary-color, 35%);
+		.icon-primary-color {
+			color: $primary-color;
+		}
+	}
+	@media screen and (min-width: 768px) {
+		padding: $padding-sec-above-768;
+	}
+	@media screen and (min-width: 900px) {
+		.wrapper {
+			width: 100%;
+			@include flexbox(space-between, initial);
+		}
+		.operation-list-group {
+			width: 27vw;
+		}
+		p {
+			margin-left: 30px;
+		}
+	}
 }
 
-/*  Restaurants Section */ 
+/*  Restaurants Section */
 
 #restaurants {
-    background: $white-smook;
-    padding: $padding-sec-under-768;
-   
-    .wrapper{
-        margin-top: 25px;
-        .restaurant-list-group {
-            color: $black;
-            height: 290px;
-            background: $white;
-            margin-bottom: 25px;
-            border-radius: 15px;
-        }
-        img {
-            width: 100%;
-            height: 205px;
-            object-fit: cover;
-            border-top-left-radius: 15px;
-            border-top-right-radius: 15px;
-            object-position: 50% 65%;
-        }
-        .restaurant-details {
-            padding: 15px;
-            position: relative;
-            p {
-                margin-top: 5px;
-                font-size: 1.1rem;
-                font-weight: 300;
-            }
-            .fa-heart {
-                position: absolute;
-                font-size: 1.6rem;
-                right: 20px;
-                top: 20px;             
-                &:active {                 
-                    @include heart-active-hover;
-               }          
-            }
-            small {
-                position: absolute;
-                background: $tertiary-color;
-                padding: 12px;
-                right: 10px;
-                top: -200px;
-                color: darken($tertiary-color, 35%);
-                font-weight: bold;
-            }
-        }
-    }
-    @media screen and (min-width: 768px) {
-        padding: $padding-sec-above-768;
-        .wrapper {
-            display: grid;
-            width: 100%;
-            height: auto;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
-            grid-gap: 25px;
-            .restaurant-list-group {
-                margin-bottom: 0px;
-                .fa-heart:hover {
-                    @include heart-active-hover();
-                }
-            }
-        }
-    }
-}
+	background: $white-smook;
+	padding: $padding-sec-under-768;
 
+	.wrapper {
+		margin-top: 25px;
+		.restaurant-list-group {
+			color: $black;
+			height: 290px;
+			background: $white;
+			margin-bottom: 25px;
+			border-radius: 15px;
+		}
+		img {
+			width: 100%;
+			height: 205px;
+			object-fit: cover;
+			border-top-left-radius: 15px;
+			border-top-right-radius: 15px;
+			object-position: 50% 65%;
+		}
+		.restaurant-details {
+			padding: 15px;
+			position: relative;
+			p {
+				margin-top: 5px;
+				font-size: 1.1rem;
+				font-weight: 300;
+			}
+			.fa-heart {
+				position: absolute;
+				font-size: 1.6rem;
+				right: 20px;
+				top: 20px;
+				&:active {
+					@include heart-active-hover;
+				}
+			}
+			small {
+				position: absolute;
+				background: $tertiary-color;
+				padding: 12px;
+				right: 10px;
+				top: -200px;
+				color: darken($tertiary-color, 35%);
+				font-weight: bold;
+			}
+		}
+	}
+	@media screen and (min-width: 768px) {
+		padding: $padding-sec-above-768;
+		.wrapper {
+			display: grid;
+			width: 100%;
+			height: auto;
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: 1fr 1fr;
+			grid-gap: 25px;
+			.restaurant-list-group {
+				margin-bottom: 0px;
+				.fa-heart:hover {
+					@include heart-active-hover();
+				}
+			}
+		}
+	}
+}
 
 // Page lapalettedugout
 @mixin text-overflow {
-    width: 80%;     
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;  
-    transition: width 700Ms;  
+	width: 80%;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	transition: width 500ms;
 }
 
 .fa-arrow-left {
-    @include arrow-left;
+	@include arrow-left;
 }
 
+#main-container {
+	// position: relative;
+	// height: 100%;
+	// margin-bottom: 30px;
+	img {
+		width: 100%;
+		height: 270px;
+		object-fit: cover;
+		position: absolute;
+		top: 70px;
+		z-index: -1;
+	}
+	main {
+		width: 100%;
+		background-color: $white-smook;
+		padding: 30px 15px 50px 15px;
+		border-top-left-radius: 35px;
+		border-top-right-radius: 35px;
+		// position: absolute;
+		margin-top: 230px;
+		z-index: 1;
+		.restaurant-name {
+			width: 100%;
+			@include flexbox(space-around);
+			h1 {
+				font-family: 'shrikhand', cursive;
+				font-size: 1.7rem;
+			}
+			.fa-heart {
+				font-size: 1.6rem;
+				&:active {
+					@include heart-active-hover;
+				}
+			}
+		}
+		h2 {
+			margin-top: 35px;
+			text-transform: uppercase;
+			font-weight: 300;
+			&::after {
+				content: '';
+				background-color: $tertiary-color;
+				width: 60px;
+				height: 4px;
+				display: block;
+				margin: 5px 0 20px 0;
+			}
+		}
+		.card {
+			background-color: $white;
+			padding: 15px;
+			margin-bottom: 15px;
+			border-radius: 20px;
+			font-weight: 600;
+			position: relative;
+			overflow: hidden;
+			cursor: pointer;
+			h3 {
+				margin-bottom: 5px;
+				@include text-overflow;
+			}
+			p {
+				font-weight: 300;
+				display: inline-block;
+				@include text-overflow;
+			}
 
-
-#main-page{
-    position: relative;
-    img {
-        width: 100%;
-        height: 270px;
-        object-fit: cover;
-    }
-    #container-lapalettedugout {
-        width: 100%;
-        background-color: $white-smook;
-        padding: 30px 15px 40px;
-        border-top-left-radius: 35px;
-        border-top-right-radius: 35px;
-        position: absolute;
-        top: 220px;
-        .restaurant-name {
-            width: 100%;
-            @include flexbox(space-around,);
-            h1 {
-            font-family: 'shrikhand', cursive;
-            font-size: 1.7rem;
-            }
-            .fa-heart {
-                font-size: 1.6rem;
-                &:active {
-                    @include heart-active-hover;
-                }
-            }
-        }
-        h2 {
-            margin-top: 35px;
-            text-transform: uppercase;
-            font-weight: 300;
-            &::after {
-                content: '';
-                background-color: $tertiary-color;
-                width: 60px;
-                height: 4px;
-                display: block;
-                margin: 5px 0 20px 0;
-            }
-        }
-        .card {
-            background-color: $white;
-            padding: 15px;
-            margin-bottom: 15px;
-            border-radius: 20px;
-            font-weight: 600;
-            position: relative;
-            overflow: hidden;
-            cursor: pointer;
-            // @include flexbox(space-between, flex-end);
-            // .entree-details {  }  
-
-            h3 {           
-                margin-bottom: 5px;
-                @include text-overflow;
-            }
-            p {
-                font-weight: 300; 
-                display: inline-block; 
-                @include text-overflow;  
-            }
-             
-            strong {
-                // margin-left: 10px;
-                float: right;
-                transition: transform 500ms;
-            }
-            .fa-check-container {
-                background-color: $tertiary-color;
-                position: absolute;
-                right: -75px;
-                // right: 0;
-                top: 0;
-                height: 100%;
-                width: 70px;          
-                border-radius: 0 20px 20px 0;
-                @include flexbox;
-                 transition: transform 500ms;
-                .fa-check-bg {
-                    width: 23px;
-                    height: 23px;
-                    border-radius: 50%;
-                    background-color: $white;
-                    @include flexbox;
-                    .fa-check {
-                        color: $tertiary-color;
-                        font-size: 13px;
-                        transition: transform 500ms;
-                    }
-                }
-            }
-            &:active {
-                .fa-check-container {
-                    transform: translateX(-70px);
-                    .fa-check {
-                        transform: rotate(2turn); 
-                    }
-                }
-                strong {
-                    transform: translateX(-60px);             
-                }
-                h3,p {
-                    width: 70%;      
-                }             
-            }
-        } 
-    }
+			strong {
+				float: right;
+				transition: transform 500ms;
+			}
+			.fa-check-container {
+				background-color: $tertiary-color;
+				position: absolute;
+				right: -75px;
+				// right: 0;
+				top: 0;
+				height: 100%;
+				width: 70px;
+				border-radius: 0 20px 20px 0;
+				@include flexbox;
+				transition: transform 500ms;
+				.fa-check-bg {
+					width: 23px;
+					height: 23px;
+					border-radius: 50%;
+					background-color: $white;
+					@include flexbox;
+					.fa-check {
+						color: $tertiary-color;
+						font-size: 13px;
+						transition: transform 500ms;
+					}
+				}
+			}
+			&:active {
+				.fa-check-container {
+					transform: translateX(-70px);
+					.fa-check {
+						transform: rotate(2turn);
+					}
+				}
+				strong {
+					transform: translateX(-60px);
+				}
+				h3, p {
+					width: 70%;
+				}
+			}
+		}
+		.btn-container {
+			margin-top: 50px;
+			@include flexbox;
+			button {
+				@include btn;
+				padding: 18px 60px;
+				&:hover {
+					@extend %hover;
+				}
+			}
+		}
+	}
+	@media screen and (min-width: 768px) {
+			main {
+				padding: 30px 55px 50px 30px;
+			}
+			.sections-wrapper {
+				display: grid;
+				grid-template: 33.3% / repeat(3, 33.3%);
+				grid-gap: 15px;
+			}
+	}	
+	@media screen and (min-width: 1024px){ 
+		.card:hover {
+			.fa-check-container {
+				transform: translateX(-70px);
+				.fa-check {
+					transform: rotate(2turn);
+				}
+			}
+			strong {
+				transform: translateX(-60px);
+			}
+			h3, p {
+				width: 70%;
+			}
+		}
+		.fa-heart {
+			&:hover {
+				@include heart-active-hover;
+			}
+		}
+	}
+	
 }
-
-
-
-// footer section
 
 footer {
-    background-color: $night-rider;
-    padding: 1.8rem;
-    font-size: 1rem;
-    font-weight: normal;
-    img {
-      height: 20px;
-      margin-bottom: 20px;
-    }
-    .footer-list {
-        padding-bottom: 10px;
-        a {
-            color:$white;
-            font-style: normal;
-            &:hover {
-                text-decoration: underline;
-            }
-        }
-        .fas {
-            margin-right: 7px;
-            font-size: 0.7rem;
-        }
-    }
+	background-color: $night-rider;
+	padding: 1.8rem;
+	font-size: 1rem;
+	font-weight: normal;
+	img {
+		height: 20px;
+		margin-bottom: 20px;
+	}
+	.footer-list {
+		padding-bottom: 10px;
+		a {
+			color: $white;
+			font-style: normal;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+		.fas {
+			margin-right: 7px;
+			font-size: 0.7rem;
+		}
+	}
 
-    @media screen and (min-width:410px) {
-        .wrapper {
-            width: 100%;
-            display: grid;
-            grid-template: repeat(2, 50%) / repeat(2, 50%);
-        }
-    }
-    @media screen and (min-width: 768px) {
-        padding: $padding-sec-above-768;
-        .wrapper {
-            @include flexbox(space-between, initial);
-        }
-    }
+	@media screen and (min-width: 410px) {
+		.wrapper {
+			width: 100%;
+			display: grid;
+			grid-template: repeat(2, 50%) / repeat(2, 50%);
+		}
+	}
+	@media screen and (min-width: 768px) {
+		padding: $padding-sec-above-768;
+		.wrapper {
+			@include flexbox(space-between, initial);
+		}
+	}
 }

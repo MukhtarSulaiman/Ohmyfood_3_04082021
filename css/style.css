@@ -1,3 +1,4 @@
+/** @format */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Shrikhand&display=swap");
 * {
   margin: 0;
@@ -13,7 +14,7 @@ a {
   text-decoration: none;
 }
 
-#intro-sec button:hover {
+#main-container main .btn-container button:hover, #intro-sec button:hover {
   background: linear-gradient(to top, #a16be0, #ff93e1);
   box-shadow: 0px 5px 10px #888888;
 }
@@ -39,14 +40,15 @@ header #logo img {
   height: 35px;
 }
 header .location {
-  background-color: #EAEAEA;
+  background-color: #eaeaea;
   height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
   box-shadow: inset 0px 7px 10px -10px #353535;
 }
-header .location i, header .location p {
+header .location i,
+header .location p {
   font-size: 1.2rem;
 }
 header .location i {
@@ -86,7 +88,7 @@ header .location i {
   border-radius: 30px;
   font-weight: 500;
   border: none;
-  background: linear-gradient(to top, #9356DC, #FF79DA);
+  background: linear-gradient(to top, #9356dc, #ff79da);
   color: #fff;
   font-size: 1rem;
   cursor: pointer;
@@ -115,7 +117,7 @@ header .location i {
   left: -12px;
   width: 25px;
   height: 25px;
-  background: #9356DC;
+  background: #9356dc;
   border-radius: 50%;
   color: #fff;
   display: flex;
@@ -136,7 +138,7 @@ header .location i {
   background: #f2eafb;
 }
 #fonctionnement-sec .last-operation-list-group .icon-primary-color {
-  color: #9356DC;
+  color: #9356dc;
 }
 @media screen and (min-width: 768px) {
   #fonctionnement-sec {
@@ -197,7 +199,7 @@ header .location i {
   top: 20px;
 }
 #restaurants .wrapper .restaurant-details .fa-heart:active {
-  background: -webkit-linear-gradient(#9356DC, #FF79DA);
+  background: -webkit-linear-gradient(#9356dc, #ff79da);
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
@@ -207,7 +209,7 @@ header .location i {
 }
 #restaurants .wrapper .restaurant-details small {
   position: absolute;
-  background: #99E2D0;
+  background: #99e2d0;
   padding: 12px;
   right: 10px;
   top: -200px;
@@ -230,7 +232,7 @@ header .location i {
     margin-bottom: 0px;
   }
   #restaurants .wrapper .restaurant-list-group .fa-heart:hover {
-    background: -webkit-linear-gradient(#9356DC, #FF79DA);
+    background: -webkit-linear-gradient(#9356dc, #ff79da);
     -webkit-background-clip: text;
     -moz-background-clip: text;
     background-clip: text;
@@ -248,38 +250,38 @@ header .location i {
   color: #000;
 }
 
-#main-page {
-  position: relative;
-}
-#main-page img {
+#main-container img {
   width: 100%;
   height: 270px;
   object-fit: cover;
+  position: absolute;
+  top: 70px;
+  z-index: -1;
 }
-#main-page #container-lapalettedugout {
+#main-container main {
   width: 100%;
   background-color: #f6f6f6;
-  padding: 30px 15px 40px;
+  padding: 30px 15px 50px 15px;
   border-top-left-radius: 35px;
   border-top-right-radius: 35px;
-  position: absolute;
-  top: 220px;
+  margin-top: 230px;
+  z-index: 1;
 }
-#main-page #container-lapalettedugout .restaurant-name {
+#main-container main .restaurant-name {
   width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-#main-page #container-lapalettedugout .restaurant-name h1 {
+#main-container main .restaurant-name h1 {
   font-family: "shrikhand", cursive;
   font-size: 1.7rem;
 }
-#main-page #container-lapalettedugout .restaurant-name .fa-heart {
+#main-container main .restaurant-name .fa-heart {
   font-size: 1.6rem;
 }
-#main-page #container-lapalettedugout .restaurant-name .fa-heart:active {
-  background: -webkit-linear-gradient(#9356DC, #FF79DA);
+#main-container main .restaurant-name .fa-heart:active {
+  background: -webkit-linear-gradient(#9356dc, #ff79da);
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
@@ -287,20 +289,20 @@ header .location i {
   color: transparent;
   animation: scale 1s forwards;
 }
-#main-page #container-lapalettedugout h2 {
+#main-container main h2 {
   margin-top: 35px;
   text-transform: uppercase;
   font-weight: 300;
 }
-#main-page #container-lapalettedugout h2::after {
+#main-container main h2::after {
   content: "";
-  background-color: #99E2D0;
+  background-color: #99e2d0;
   width: 60px;
   height: 4px;
   display: block;
   margin: 5px 0 20px 0;
 }
-#main-page #container-lapalettedugout .card {
+#main-container main .card {
   background-color: #fff;
   padding: 15px;
   margin-bottom: 15px;
@@ -310,29 +312,29 @@ header .location i {
   overflow: hidden;
   cursor: pointer;
 }
-#main-page #container-lapalettedugout .card h3 {
+#main-container main .card h3 {
   margin-bottom: 5px;
   width: 80%;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  transition: width 700Ms;
+  transition: width 500ms;
 }
-#main-page #container-lapalettedugout .card p {
+#main-container main .card p {
   font-weight: 300;
   display: inline-block;
   width: 80%;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  transition: width 700Ms;
+  transition: width 500ms;
 }
-#main-page #container-lapalettedugout .card strong {
+#main-container main .card strong {
   float: right;
   transition: transform 500ms;
 }
-#main-page #container-lapalettedugout .card .fa-check-container {
-  background-color: #99E2D0;
+#main-container main .card .fa-check-container {
+  background-color: #99e2d0;
   position: absolute;
   right: -75px;
   top: 0;
@@ -344,7 +346,7 @@ header .location i {
   align-items: center;
   transition: transform 500ms;
 }
-#main-page #container-lapalettedugout .card .fa-check-container .fa-check-bg {
+#main-container main .card .fa-check-container .fa-check-bg {
   width: 23px;
   height: 23px;
   border-radius: 50%;
@@ -353,22 +355,74 @@ header .location i {
   justify-content: center;
   align-items: center;
 }
-#main-page #container-lapalettedugout .card .fa-check-container .fa-check-bg .fa-check {
-  color: #99E2D0;
+#main-container main .card .fa-check-container .fa-check-bg .fa-check {
+  color: #99e2d0;
   font-size: 13px;
   transition: transform 500ms;
 }
-#main-page #container-lapalettedugout .card:active .fa-check-container {
+#main-container main .card:active .fa-check-container {
   transform: translateX(-70px);
 }
-#main-page #container-lapalettedugout .card:active .fa-check-container .fa-check {
+#main-container main .card:active .fa-check-container .fa-check {
   transform: rotate(2turn);
 }
-#main-page #container-lapalettedugout .card:active strong {
+#main-container main .card:active strong {
   transform: translateX(-60px);
 }
-#main-page #container-lapalettedugout .card:active h3, #main-page #container-lapalettedugout .card:active p {
+#main-container main .card:active h3, #main-container main .card:active p {
   width: 70%;
+}
+#main-container main .btn-container {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#main-container main .btn-container button {
+  padding: 18px;
+  border-radius: 30px;
+  font-weight: 500;
+  border: none;
+  background: linear-gradient(to top, #9356dc, #ff79da);
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0px 5px 10px #bbb;
+  transition: background 900ms, box-shadow 500ms;
+  padding: 18px 60px;
+}
+@media screen and (min-width: 768px) {
+  #main-container main {
+    padding: 30px 55px 50px 30px;
+  }
+  #main-container .sections-wrapper {
+    display: grid;
+    grid-template: 33.3%/repeat(3, 33.3%);
+    grid-gap: 15px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #main-container .card:hover .fa-check-container {
+    transform: translateX(-70px);
+  }
+  #main-container .card:hover .fa-check-container .fa-check {
+    transform: rotate(2turn);
+  }
+  #main-container .card:hover strong {
+    transform: translateX(-60px);
+  }
+  #main-container .card:hover h3, #main-container .card:hover p {
+    width: 70%;
+  }
+  #main-container .fa-heart:hover {
+    background: -webkit-linear-gradient(#9356dc, #ff79da);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    font-weight: 600;
+    color: transparent;
+    animation: scale 1s forwards;
+  }
 }
 
 footer {
