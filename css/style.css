@@ -337,6 +337,7 @@ header .location i {
   position: relative;
   overflow: hidden;
   cursor: pointer;
+  opacity: 0;
   box-shadow: 0px 5px 18px -7px #bbb;
 }
 #main-container main .sections-wrapper .card h3 {
@@ -401,122 +402,150 @@ header .location i {
   width: 70%;
 }
 #main-container main .sections-wrapper .animation-card1 {
-  animation: fadein 2000ms;
+  animation: fadein 2s forwards;
 }
 @keyframes fadein {
-  from {
+  0% {
     opacity: 0;
-    transform: translateY(0%);
+    transform: translateY(15px);
   }
-  to {
+  100% {
     opacity: 1;
-    transform: translateY(-15%);
+    transform: translateY(0%);
   }
 }
 #main-container main .sections-wrapper .animation-card2 {
-  animation: fadein 2000ms 200ms;
+  animation: fadein 2s 0.2s forwards;
 }
 @keyframes fadein {
-  from {
-    opacity: 0;
+  0% {
+    transform: translateY(15px);
   }
-  to {
-    opacity: 1;
+  100% {
+    transform: translateY(0px);
   }
 }
 #main-container main .sections-wrapper .animation-card3 {
-  animation: fadein 2000ms 400ms;
+  animation: fadein 2s 0.4s forwards;
 }
 @keyframes fadein {
-  from {
+  0% {
     opacity: 0;
+    transform: translateY(15px);
   }
-  to {
+  100% {
     opacity: 1;
+    transform: translateY(0px);
   }
 }
 #main-container main .sections-wrapper .animation-card4 {
-  animation: fadein 2000ms 600ms;
+  animation: fadein 2s 0.6s forwards;
 }
 @keyframes fadein {
-  from {
+  0% {
     opacity: 0;
+    transform: translateY(15px);
   }
-  to {
+  100% {
     opacity: 1;
+    transform: translateY(0%);
   }
 }
 #main-container main .sections-wrapper .animation-card5 {
-  animation: fadein 2000ms 800ms;
+  animation: fadein 2s 0.8s forwards;
 }
 @keyframes fadein {
-  from {
+  0% {
     opacity: 0;
+    transform: translateY(15px);
   }
-  to {
+  100% {
     opacity: 1;
+    transform: translateY(0%);
   }
 }
 #main-container main .sections-wrapper .animation-card6 {
-  animation: fadein 2000ms 1000ms;
+  animation: fadein 2s 1s forwards;
 }
 @keyframes fadein {
-  from {
+  0% {
     opacity: 0;
+    transform: translateY(15px);
   }
-  to {
+  100% {
     opacity: 1;
+    transform: translateY(0%);
   }
 }
 #main-container main .sections-wrapper .animation-card7 {
-  animation: fadein 2000ms 1200ms;
+  animation: fadein 2s 1.2s forwards;
 }
 @keyframes fadein {
-  from {
+  0% {
     opacity: 0;
+    transform: translateY(15px);
   }
-  to {
+  100% {
     opacity: 1;
+    transform: translateY(0%);
   }
 }
 #main-container main .sections-wrapper .animation-card8 {
-  animation: fadein 2000ms 1400ms;
+  animation: fadein 2s 1.4s forwards;
 }
 @keyframes fadein {
-  from {
+  0% {
     opacity: 0;
+    transform: translateY(15px);
   }
-  to {
+  100% {
     opacity: 1;
+    transform: translateY(0%);
   }
 }
 #main-container main .sections-wrapper .animation-card9 {
-  animation: fadein 2000ms 1600ms;
+  animation: fadein 2s 1.6s forwards;
 }
 @keyframes fadein {
-  from {
+  0% {
     opacity: 0;
+    transform: translateY(15px);
   }
-  to {
+  100% {
     opacity: 1;
+    transform: translateY(0%);
   }
 }
 #main-container main .sections-wrapper .animation-card10 {
-  animation: fadein 2000ms 1800ms;
+  animation: fadein 2s 1.8s forwards;
 }
 @keyframes fadein {
-  from {
+  0% {
     opacity: 0;
+    transform: translateY(15px);
   }
-  to {
+  100% {
     opacity: 1;
+    transform: translateY(0%);
   }
 }
 #main-container main .btn-container {
   margin-top: 50px;
+  opacity: 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: btn_fadein 2s 2s forwards;
+}
+@keyframes btn_fadein {
+  from {
+    opacity: 0%;
+    width: 0%;
+  }
+  to {
+    opacity: 100%;
+    width: 100%;
+  }
 }
 #main-container main .btn-container button {
   padding: 18px;
