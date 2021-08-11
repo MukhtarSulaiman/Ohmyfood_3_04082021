@@ -135,7 +135,7 @@ header {
 	}
 }
 
-/* header section */
+/* Intro section */
 
 #intro-sec {
 	height: auto;
@@ -170,8 +170,13 @@ header {
 		height: 80px;
 		border-radius: 25px;
 		position: relative;
+		transition: transform 500ms, background 500ms;
 		@include flexbox;
 		@include box-shadow;
+		&:hover {
+			transform: scale(1.05);
+			background: lighten($primary-color, 35%);
+		}
 		span {
 			position: absolute;
 			left: -12px;
@@ -191,6 +196,11 @@ header {
 		p {
 			color: $black;
 			font-weight: 500;
+		}
+		@media screen and (max-width: 768px){
+			&:hover {
+			transform: scale(1);
+			}
 		}
 	}
 	.last-operation-list-group {
@@ -230,7 +240,11 @@ header {
 			background: $white;
 			margin-bottom: 25px;
 			border-radius: 15px;
+			transition: transform 500ms;
 			@include box-shadow;
+			&:hover {
+				transform: scale(1.05);
+			}
 		}
 		img {
 			width: 100%;
@@ -320,6 +334,7 @@ header {
 			}
 			.fa-heart {
 				font-size: 1.6rem;
+				cursor: pointer;
 				&:active {
 					@include heart-active-hover;
 				}
