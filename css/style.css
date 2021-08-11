@@ -315,51 +315,12 @@ header .location i {
   color: transparent;
   animation: scale 1s forwards;
 }
-#main-container main #entrees {
-  animation: fadein 800ms, width 800ms;
-}
-@keyframes fadein {
-  from {
-    opacity: 0;
-    width: 0%;
-  }
-  to {
-    opacity: 1;
-    width: 100%;
-  }
-}
-#main-container main #plats {
-  animation: fadein 800ms 200ms, width 800ms 200ms;
-}
-@keyframes fadein {
-  from {
-    opacity: 0;
-    width: 0%;
-  }
-  to {
-    opacity: 1;
-    width: 100%;
-  }
-}
-#main-container main #desserts {
-  animation: fadein 800ms 400ms, width 800ms 400ms;
-}
-@keyframes fadein {
-  from {
-    opacity: 0;
-    width: 0%;
-  }
-  to {
-    opacity: 1;
-    width: 100%;
-  }
-}
-#main-container main h2 {
+#main-container main .sections-wrapper h2 {
   margin-top: 35px;
   text-transform: uppercase;
   font-weight: 300;
 }
-#main-container main h2::after {
+#main-container main .sections-wrapper h2::after {
   content: "";
   background-color: #99e2d0;
   width: 60px;
@@ -367,7 +328,7 @@ header .location i {
   display: block;
   margin: 5px 0 20px 0;
 }
-#main-container main .card {
+#main-container main .sections-wrapper .card {
   background-color: #fff;
   padding: 15px;
   margin-bottom: 15px;
@@ -378,7 +339,7 @@ header .location i {
   cursor: pointer;
   box-shadow: 0px 5px 18px -7px #bbb;
 }
-#main-container main .card h3 {
+#main-container main .sections-wrapper .card h3 {
   margin-bottom: 5px;
   width: 80%;
   overflow: hidden;
@@ -386,7 +347,7 @@ header .location i {
   text-overflow: ellipsis;
   transition: width 500ms;
 }
-#main-container main .card p {
+#main-container main .sections-wrapper .card p {
   font-weight: 300;
   display: inline-block;
   width: 80%;
@@ -395,11 +356,11 @@ header .location i {
   text-overflow: ellipsis;
   transition: width 500ms;
 }
-#main-container main .card strong {
+#main-container main .sections-wrapper .card strong {
   float: right;
   transition: transform 500ms;
 }
-#main-container main .card .fa-check-container {
+#main-container main .sections-wrapper .card .fa-check-container {
   background-color: #99e2d0;
   position: absolute;
   right: -75px;
@@ -412,7 +373,7 @@ header .location i {
   align-items: center;
   transition: transform 500ms;
 }
-#main-container main .card .fa-check-container .fa-check-bg {
+#main-container main .sections-wrapper .card .fa-check-container .fa-check-bg {
   width: 23px;
   height: 23px;
   border-radius: 50%;
@@ -421,23 +382,135 @@ header .location i {
   justify-content: center;
   align-items: center;
 }
-#main-container main .card .fa-check-container .fa-check-bg .fa-check {
+#main-container main .sections-wrapper .card .fa-check-container .fa-check-bg .fa-check {
   color: #99e2d0;
   font-size: 13px;
   transition: transform 500ms;
 }
-#main-container main .card:active .fa-check-container {
+#main-container main .sections-wrapper .card:active .fa-check-container {
   transform: translateX(-70px);
 }
-#main-container main .card:active .fa-check-container .fa-check {
+#main-container main .sections-wrapper .card:active .fa-check-container .fa-check {
   transform: rotate(2turn);
 }
-#main-container main .card:active strong {
+#main-container main .sections-wrapper .card:active strong {
   transform: translateX(-60px);
 }
-#main-container main .card:active h3,
-#main-container main .card:active p {
+#main-container main .sections-wrapper .card:active h3,
+#main-container main .sections-wrapper .card:active p {
   width: 70%;
+}
+#main-container main .sections-wrapper .animation-card1 {
+  animation: fadein 2000ms;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(0%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-15%);
+  }
+}
+#main-container main .sections-wrapper .animation-card2 {
+  animation: fadein 2000ms 200ms;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+#main-container main .sections-wrapper .animation-card3 {
+  animation: fadein 2000ms 400ms;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+#main-container main .sections-wrapper .animation-card4 {
+  animation: fadein 2000ms 600ms;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+#main-container main .sections-wrapper .animation-card5 {
+  animation: fadein 2000ms 800ms;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+#main-container main .sections-wrapper .animation-card6 {
+  animation: fadein 2000ms 1000ms;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+#main-container main .sections-wrapper .animation-card7 {
+  animation: fadein 2000ms 1200ms;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+#main-container main .sections-wrapper .animation-card8 {
+  animation: fadein 2000ms 1400ms;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+#main-container main .sections-wrapper .animation-card9 {
+  animation: fadein 2000ms 1600ms;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+#main-container main .sections-wrapper .animation-card10 {
+  animation: fadein 2000ms 1800ms;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 #main-container main .btn-container {
   margin-top: 50px;
@@ -461,34 +534,34 @@ header .location i {
   padding: 18px 60px;
 }
 @media screen and (min-width: 768px) {
-  #main-container img {
-    height: 260px !important;
-  }
   #main-container main {
     padding: 30px 55px 50px 30px;
     margin-top: 225px;
   }
-  #main-container .sections-wrapper {
+  #main-container main img {
+    height: 260px !important;
+  }
+  #main-container main .sections-wrapper {
     display: grid;
     grid-template: 33.3%/repeat(3, 33.3%);
     grid-gap: 15px;
   }
 }
 @media screen and (min-width: 1024px) {
-  #main-container .card:hover .fa-check-container {
+  #main-container main .card:hover .fa-check-container {
     transform: translateX(-70px);
   }
-  #main-container .card:hover .fa-check-container .fa-check {
+  #main-container main .card:hover .fa-check-container .fa-check {
     transform: rotate(2turn);
   }
-  #main-container .card:hover strong {
+  #main-container main .card:hover strong {
     transform: translateX(-60px);
   }
-  #main-container .card:hover h3,
-#main-container .card:hover p {
+  #main-container main .card:hover h3,
+#main-container main .card:hover p {
     width: 70%;
   }
-  #main-container .fa-heart:hover {
+  #main-container main .fa-heart:hover {
     background: -webkit-linear-gradient(#9356dc, #ff79da);
     background: -moz-linear-gradient(#9356dc, #ff79da);
     background: linear-gradient(#9356dc, #ff79da);
