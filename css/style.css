@@ -634,15 +634,16 @@ header .location i {
 }
 #main-container main .sections-wrapper .card strong {
   float: right;
+  margin-right: 5px;
   transition: transform 500ms;
 }
 #main-container main .sections-wrapper .card .fa-check-container {
   background-color: #99e2d0;
   position: absolute;
-  right: -75px;
+  right: -80px;
   top: 0;
   height: 100%;
-  width: 70px;
+  width: 80px;
   border-radius: 0 20px 20px 0;
   display: flex;
   justify-content: center;
@@ -670,11 +671,11 @@ header .location i {
   transform: rotate(2turn);
 }
 #main-container main .sections-wrapper .card:active strong {
-  transform: translateX(-60px);
+  transform: translateX(-70px);
 }
 #main-container main .sections-wrapper .card:active h3,
 #main-container main .sections-wrapper .card:active p {
-  width: 70%;
+  width: 45%;
 }
 #main-container main .sections-wrapper .animation-card1 {
   animation: fadein 2s forwards;
@@ -848,7 +849,8 @@ header .location i {
   #main-container main .sections-wrapper {
     display: grid;
     grid-template: 33.3%/repeat(3, 33.3%);
-    grid-gap: 15px;
+    grid-gap: 30px;
+    margin-right: 30px;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -859,11 +861,11 @@ header .location i {
     transform: rotate(2turn);
   }
   #main-container main .card:hover strong {
-    transform: translateX(-60px);
+    transform: translateX(-65px);
   }
   #main-container main .card:hover h3,
 #main-container main .card:hover p {
-    width: 70%;
+    width: 60%;
   }
   #main-container main .fa-heart:hover {
     background: -webkit-linear-gradient(#9356dc, #ff79da);
