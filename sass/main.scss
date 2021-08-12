@@ -110,6 +110,8 @@ $padding-sec-above-768: 3rem 4rem 4rem 4rem;
 	bottom: 0;
 	width: 100%;
 	height: 100%;
+	-webkit-animation: loading 7s forwards;
+	-moz-animation: loading 7s forwards;
 	animation: loading 7s forwards;
 	.loading-section{
 		width: 170px;
@@ -121,25 +123,61 @@ $padding-sec-above-768: 3rem 4rem 4rem 4rem;
 	}
 	.loading-text {
 		font-size: 22px;
+		-webkit-animation: fadeout-text 4s forwards;
+		-moz-animation: fadeout-text 4s forwards;
 		animation: fadeout-text 4s forwards;
 	}	
 	.prim-color {
 		border-top: 6px solid $primary-color;
+		-webkit-animation: rotate1 4s ease-in-out forwards;
+		-moz-animation: rotate1 4s ease-in-out forwards;
 		animation: rotate1 4s ease-in-out forwards;
 	}
 	.secon-color {
 		border-bottom: 6px solid $secondary-color;
+		-webkit-animation: rotate2 4s ease-out forwards;
+		-moz-animation: rotate2 4s ease-out forwards;
 		animation: rotate2 4s ease-out forwards;
 	}
 	.terti-color {
 		border-left: 6px solid $tertiary-color;
+		-webkit-animation: rotate3 4s ease-in forwards;
+		-moz-animation: rotate3 4s ease-in forwards;
 		animation: rotate3 4s ease-in forwards;
 	}
-	@keyframes loading {
+	@-webkit-keyframes loading {
 		0% {background-color: $bright-gray;  z-index: 1;}
 		50% {background-color: $bright-gray; z-index: 1;}
 		90% {z-index: 1;}
 		100% {background-color: transparent;z-index: -1;}
+	}
+		@-moz-keyframes loading {
+		0% {background-color: $bright-gray;  z-index: 1;}
+		50% {background-color: $bright-gray; z-index: 1;}
+		90% {z-index: 1;}
+		100% {background-color: transparent;z-index: -1;}
+	}
+		@keyframes loading {
+		0% {background-color: $bright-gray;  z-index: 1;}
+		50% {background-color: $bright-gray; z-index: 1;}
+		90% {z-index: 1;}
+		100% {background-color: transparent;z-index: -1;}
+	}
+	@-webkit-keyframes fadeout-text {
+		0%{opacity: 1;}
+		25%, 35% {opacity: .3;}
+		35%, 60% {opacity: 1;}
+		60%, 70% {opacity: .3;}
+		70%, 95% {opacity: 1;}
+		100% {opacity: 0;}
+	}
+	@-moz-keyframes fadeout-text {
+		0%{opacity: 1;}
+		25%, 35% {opacity: .3;}
+		35%, 60% {opacity: 1;}
+		60%, 70% {opacity: .3;}
+		70%, 95% {opacity: 1;}
+		100% {opacity: 0;}
 	}
 	@keyframes fadeout-text {
 		0%{opacity: 1;}
@@ -149,12 +187,42 @@ $padding-sec-above-768: 3rem 4rem 4rem 4rem;
 		70%, 95% {opacity: 1;}
 		100% {opacity: 0;}
 	}
+	@-webkit-keyframes rotate1 {
+		0% {opacity: 1; transform: rotate(0turn);}
+		85% {opacity: 1;}
+		100% {opacity: 0; transform: rotate(3turn);}
+	}
+	@-moz-keyframes rotate1 {
+		0% {opacity: 1; transform: rotate(0turn);}
+		85% {opacity: 1;}
+		100% {opacity: 0; transform: rotate(3turn);}
+	}
 	@keyframes rotate1 {
 		0% {opacity: 1; transform: rotate(0turn);}
 		85% {opacity: 1;}
 		100% {opacity: 0; transform: rotate(3turn);}
 	}
+	@-webkit-keyframes rotate2 {
+		0% {opacity: 1; transform: rotate(0turn);}
+		85% {opacity: 1;}
+		100% {opacity: 0; transform: rotate(3turn);}
+	}
+	@-moz-keyframes rotate2 {
+		0% {opacity: 1; transform: rotate(0turn);}
+		85% {opacity: 1;}
+		100% {opacity: 0; transform: rotate(3turn);}
+	}
 	@keyframes rotate2 {
+		0% {opacity: 1; transform: rotate(0turn);}
+		85% {opacity: 1;}
+		100% {opacity: 0; transform: rotate(3turn);}
+	}
+	@-webkit-keyframes rotate3 {
+		0% {opacity: 1; transform: rotate(0turn);}
+		85% {opacity: 1;}
+		100% {opacity: 0; transform: rotate(3turn);}
+	}
+	@-moz-keyframes rotate3 {
 		0% {opacity: 1; transform: rotate(0turn);}
 		85% {opacity: 1;}
 		100% {opacity: 0; transform: rotate(3turn);}
@@ -491,7 +559,7 @@ header {
 				animation: fadein 2s forwards;
 				@keyframes fadein {
 					0% {opacity: 0; transform: translateY(15px);}
-					100% {opacity: 1; transform: translateY(0%);}
+					100% {opacity: 1; transform: translateY(0px);}
 				}	
 			}
 			.animation-card2 {
@@ -512,49 +580,49 @@ header {
 				animation: fadein 2s 0.6s forwards;
 				@keyframes fadein {
 					0% {opacity: 0; transform: translateY(15px);}
-					100% {opacity: 1; transform: translateY(0%);}
+					100% {opacity: 1; transform: translateY(0px);}
 				}
 			}
 			.animation-card5 {
 				animation: fadein 2s 0.8s forwards;
 				@keyframes fadein {
 					0% {opacity: 0;transform: translateY(15px);}
-					100% {opacity: 1; transform: translateY(0%);}
+					100% {opacity: 1; transform: translateY(0px);}
 				}
 			}
 			.animation-card6 {
 				animation: fadein 2s 1s forwards;
 				@keyframes fadein {
 					0% {opacity: 0; transform: translateY(15px);}
-					100% {opacity: 1; transform: translateY(0%);}
+					100% {opacity: 1; transform: translateY(0px);}
 				}
 			}
 			.animation-card7 {
 				animation: fadein 2s 1.2s forwards;
 				@keyframes fadein {
 					0% {opacity: 0; transform: translateY(15px);}
-					100% {opacity: 1; transform: translateY(0%);}
+					100% {opacity: 1; transform: translateY(0px);}
 				}
 			}
 			.animation-card8 {
 				animation: fadein 2s 1.4s forwards;
 				@keyframes fadein {
 					0% {opacity: 0; transform: translateY(15px);}
-					100% {opacity: 1; transform: translateY(0%);}
+					100% {opacity: 1; transform: translateY(0px);}
 				}
 			}
 			.animation-card9 {
 				animation: fadein 2s 1.6s forwards;
 				@keyframes fadein {
 					0% {opacity: 0; transform: translateY(15px);}
-					100% {opacity: 1; transform: translateY(0%);}
+					100% {opacity: 1; transform: translateY(0px);}
 				}
 			}
 			.animation-card10 {
 				animation: fadein 2s 1.8s forwards;
 				@keyframes fadein {
 					0% {opacity: 0; transform: translateY(15px);}
-					100% {opacity: 1; transform: translateY(0%);}
+					100% {opacity: 1; transform: translateY(0px);}
 				}
 			}
 		}	
