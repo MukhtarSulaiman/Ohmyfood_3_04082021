@@ -348,6 +348,7 @@ header {
 	}
 	@media screen and (min-width: 768px) {
 		padding: $padding-sec-above-768;
+		
 	}
 	@media screen and (min-width: 900px) {
 		.wrapper {
@@ -355,8 +356,11 @@ header {
 			@include flexbox(space-between, initial);
 		}
 		.operation-list-group {
-			width: 27vw;
+			width: 27vw;		
 		}
+		.last-operation-list-group {
+			background-color: $white-smook;
+			}
 		p {
 			margin-left: 30px;
 		}

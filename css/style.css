@@ -444,6 +444,9 @@ header .location i {
   #fonctionnement-sec .operation-list-group {
     width: 27vw;
   }
+  #fonctionnement-sec .last-operation-list-group {
+    background-color: #f6f6f6;
+  }
   #fonctionnement-sec p {
     margin-left: 30px;
   }
