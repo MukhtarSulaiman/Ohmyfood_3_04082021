@@ -1,4 +1,7 @@
-/** @format */
+@import './Utils/variables';
+@import './Utils/mixins';
+@import './Utils/extentions';
+
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Shrikhand&display=swap');
 
@@ -12,91 +15,8 @@ body {
 	font-family: 'Roboto', sans-serif;
 }
 
-
-
 a {
 	text-decoration: none;
-}
-
-// Sass
-
-$primary-color: #9356dc;
-$secondary-color: #ff79da;
-$tertiary-color: #99e2d0;
-$bright-gray: #eaeaea;
-$white-smook: #f6f6f6;
-$night-rider: #353535;
-$box-shadow-color: #bbb;
-$white: #fff;
-$black: #000;
-
-@mixin flexbox($justify-content: center, $align-items: center) {
-	display: flex;
-	justify-content: $justify-content;
-	align-items: $align-items;
-}
-
-@mixin btn {
-	padding: 18px;
-	border-radius: 30px;
-	font-weight: 500;
-	border: none;
-	background: -webkit-linear-gradient(to left top, $primary-color, $secondary-color);
-	background: -moz-linear-gradient(to left top, $primary-color, $secondary-color);
-	background: linear-gradient(to left top, $primary-color, $secondary-color);
-	color: $white;
-	font-size: 1rem;
-	cursor: pointer;
-	box-shadow: 0px 5px 10px $box-shadow-color;
-	transition: background 900ms, box-shadow 500ms;
-}
-
-%btn-on-hover {
-	background: -webkit-linear-gradient(to left top,lighten($primary-color, 5%), lighten($secondary-color, 5%));
-	background: -moz-linear-gradient(to left top,lighten($primary-color, 5%), lighten($secondary-color, 5%));
-	background: linear-gradient(to left top,lighten($primary-color, 5%), lighten($secondary-color, 5%));
-	box-shadow: 0px 5px 10px darken($box-shadow-color, 20%);
-}
-
-/* padding sections: Fonctionnement and Restaurants*/
-$padding-sec-under-768: 3rem 2rem 4rem 2rem;
-$padding-sec-above-768: 3rem 4rem 4rem 4rem;
-
-@mixin heart-active-hover {
-	background: -webkit-linear-gradient($primary-color, $secondary-color);
-	background: -moz-linear-gradient($primary-color, $secondary-color);
-	background: linear-gradient($primary-color, $secondary-color);
-	-webkit-background-clip: text;
-	-moz-background-clip: text;
-	background-clip: text;
-	font-weight: 600;
-	color: transparent;
-	animation: scale 1s forwards;
-}
-@keyframes scale {
-	40% {
-		transform: scale(1.2);
-	}
-}
-
-@mixin box-shadow {
-	box-shadow: 0px 5px 18px -7px $box-shadow-color;
-}
-
-@mixin arrow-left {
-	position: absolute;
-	left: 40px;
-	top: 25px;
-	font-size: 1.2rem;
-	color: $black;
-}
-
-@mixin text-overflow {
-	width: 80%;
-	overflow: hidden;
-	white-space: nowrap;
-	text-overflow: ellipsis;
-	transition: width 500ms;
 }
 
 // Loading spinner
@@ -408,6 +328,7 @@ header {
 				font-size: 1.6rem;
 				right: 20px;
 				top: 20px;
+				transition: color 600ms linear;
 				&:active {
 					@include heart-active-hover;
 				}
@@ -476,6 +397,7 @@ header {
 			.fa-heart {
 				font-size: 1.6rem;
 				cursor: pointer;
+				transition: color 600ms linear;
 				&:active {
 					@include heart-active-hover;
 				}

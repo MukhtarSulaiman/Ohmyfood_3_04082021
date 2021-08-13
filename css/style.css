@@ -1,5 +1,17 @@
-/** @format */
+/* padding sections: Fonctionnement and Restaurants*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Shrikhand&display=swap");
+@keyframes scale {
+  40% {
+    transform: scale(1.2);
+  }
+}
+#main-container main .btn-container button:hover, #intro-sec button:hover {
+  background: -webkit-linear-gradient(to left top, #a16be0, #ff93e1);
+  background: -moz-linear-gradient(to left top, #a16be0, #ff93e1);
+  background: linear-gradient(to left top, #a16be0, #ff93e1);
+  box-shadow: 0px 5px 10px #888888;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -14,19 +26,6 @@ a {
   text-decoration: none;
 }
 
-#main-container main .btn-container button:hover, #intro-sec button:hover {
-  background: -webkit-linear-gradient(to left top, #a16be0, #ff93e1);
-  background: -moz-linear-gradient(to left top, #a16be0, #ff93e1);
-  background: linear-gradient(to left top, #a16be0, #ff93e1);
-  box-shadow: 0px 5px 10px #888888;
-}
-
-/* padding sections: Fonctionnement and Restaurants*/
-@keyframes scale {
-  40% {
-    transform: scale(1.2);
-  }
-}
 .loading {
   display: flex;
   justify-content: center;
@@ -494,6 +493,7 @@ header .location i {
   font-size: 1.6rem;
   right: 20px;
   top: 20px;
+  transition: color 600ms linear;
 }
 #restaurants .wrapper .restaurant-details .fa-heart:active {
   background: -webkit-linear-gradient(#9356dc, #ff79da);
@@ -504,7 +504,7 @@ header .location i {
   background-clip: text;
   font-weight: 600;
   color: transparent;
-  animation: scale 1s forwards;
+  animation: scale 3s forwards;
 }
 #restaurants .wrapper .restaurant-details small {
   position: absolute;
@@ -539,7 +539,7 @@ header .location i {
     background-clip: text;
     font-weight: 600;
     color: transparent;
-    animation: scale 1s forwards;
+    animation: scale 3s forwards;
   }
 }
 
@@ -581,6 +581,7 @@ header .location i {
 #main-container main .restaurant-name .fa-heart {
   font-size: 1.6rem;
   cursor: pointer;
+  transition: color 600ms linear;
 }
 #main-container main .restaurant-name .fa-heart:active {
   background: -webkit-linear-gradient(#9356dc, #ff79da);
@@ -591,7 +592,7 @@ header .location i {
   background-clip: text;
   font-weight: 600;
   color: transparent;
-  animation: scale 1s forwards;
+  animation: scale 3s forwards;
 }
 #main-container main .sections-wrapper h2 {
   margin-top: 35px;
@@ -885,7 +886,7 @@ header .location i {
     background-clip: text;
     font-weight: 600;
     color: transparent;
-    animation: scale 1s forwards;
+    animation: scale 3s forwards;
   }
 }
 

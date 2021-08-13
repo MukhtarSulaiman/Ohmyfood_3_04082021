@@ -1,0 +1,59 @@
+
+@mixin flexbox($justify-content: center, $align-items: center) {
+	display: flex;
+	justify-content: $justify-content;
+	align-items: $align-items;
+}
+
+@mixin btn {
+	padding: 18px;
+	border-radius: 30px;
+	font-weight: 500;
+	border: none;
+	background: -webkit-linear-gradient(to left top, $primary-color, $secondary-color);
+	background: -moz-linear-gradient(to left top, $primary-color, $secondary-color);
+	background: linear-gradient(to left top, $primary-color, $secondary-color);
+	color: $white;
+	font-size: 1rem;
+	cursor: pointer;
+	box-shadow: 0px 5px 10px $box-shadow-color;
+	transition: background 900ms, box-shadow 500ms;
+}
+
+@mixin heart-active-hover {
+	background: -webkit-linear-gradient($primary-color, $secondary-color);
+	background: -moz-linear-gradient($primary-color, $secondary-color);
+	background: linear-gradient($primary-color, $secondary-color);
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	background-clip: text;
+	font-weight: 600;
+	color: transparent;
+	// transition: color 3s linear;
+	animation: scale 3s forwards;
+}
+@keyframes scale {
+	40% {
+		transform: scale(1.2);
+	}
+}
+
+@mixin box-shadow {
+	box-shadow: 0px 5px 18px -7px $box-shadow-color;
+}
+
+@mixin arrow-left {
+	position: absolute;
+	left: 40px;
+	top: 25px;
+	font-size: 1.2rem;
+	color: $black;
+}
+
+@mixin text-overflow {
+	width: 80%;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	transition: width 500ms;
+}
