@@ -39,7 +39,7 @@ a {
   height: 100%;
   -webkit-animation: loading 7s forwards;
   -moz-animation: loading 7s forwards;
-  animation: loading 7s forwards;
+  animation: loading 5s forwards;
 }
 .loading .loading-section {
   width: 170px;
@@ -50,27 +50,27 @@ a {
 }
 .loading .loading-text {
   font-size: 22px;
-  -webkit-animation: fadeout-text 4s forwards;
-  -moz-animation: fadeout-text 4s forwards;
-  animation: fadeout-text 4s forwards;
+  -webkit-animation: fadeout-text 3s forwards;
+  -moz-animation: fadeout-text 3s forwards;
+  animation: fadeout-text 3s forwards;
 }
 .loading .prim-color {
   border-top: 6px solid #9356dc;
-  -webkit-animation: rotate1 4s ease-in-out forwards;
-  -moz-animation: rotate1 4s ease-in-out forwards;
-  animation: rotate1 4s ease-in-out forwards;
+  -webkit-animation: rotate1 3s ease-in-out forwards;
+  -moz-animation: rotate1 3s ease-in-out forwards;
+  animation: rotate1 3s ease-in-out forwards;
 }
 .loading .secon-color {
   border-bottom: 6px solid #ff79da;
-  -webkit-animation: rotate2 4s ease-out forwards;
-  -moz-animation: rotate2 4s ease-out forwards;
-  animation: rotate2 4s ease-out forwards;
+  -webkit-animation: rotate2 3s ease-out forwards;
+  -moz-animation: rotate2 3s ease-out forwards;
+  animation: rotate2 3s ease-out forwards;
 }
 .loading .terti-color {
   border-left: 6px solid #99e2d0;
-  -webkit-animation: rotate3 4s ease-in forwards;
-  -moz-animation: rotate3 4s ease-in forwards;
-  animation: rotate3 4s ease-in forwards;
+  -webkit-animation: rotate3 3s ease-in forwards;
+  -moz-animation: rotate3 3s ease-in forwards;
+  animation: rotate3 3s ease-in forwards;
 }
 @-webkit-keyframes loading {
   0% {
@@ -466,6 +466,7 @@ header .location i {
   margin-bottom: 25px;
   border-radius: 15px;
   transition: transform 500ms;
+  position: relative;
   box-shadow: 0px 5px 18px -7px #bbb;
 }
 #restaurants .wrapper .restaurant-list-group:hover {

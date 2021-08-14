@@ -20,7 +20,7 @@
 	transition: background 900ms, box-shadow 500ms;
 }
 
-@mixin heart-active-hover {
+@mixin heart-on-hover {
 	background: -webkit-linear-gradient($primary-color, $secondary-color);
 	background: -moz-linear-gradient($primary-color, $secondary-color);
 	background: linear-gradient($primary-color, $secondary-color);
