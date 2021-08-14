@@ -495,7 +495,7 @@ header .location i {
   top: 20px;
   transition: color 600ms linear;
 }
-#restaurants .wrapper .restaurant-details .fa-heart:active {
+#restaurants .wrapper .restaurant-details .fa-heart:hover {
   background: -webkit-linear-gradient(#9356dc, #ff79da);
   background: -moz-linear-gradient(#9356dc, #ff79da);
   background: linear-gradient(#9356dc, #ff79da);
@@ -529,17 +529,6 @@ header .location i {
   }
   #restaurants .wrapper .restaurant-list-group {
     margin-bottom: 0px;
-  }
-  #restaurants .wrapper .restaurant-list-group .fa-heart:hover {
-    background: -webkit-linear-gradient(#9356dc, #ff79da);
-    background: -moz-linear-gradient(#9356dc, #ff79da);
-    background: linear-gradient(#9356dc, #ff79da);
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    background-clip: text;
-    font-weight: 600;
-    color: transparent;
-    animation: scale 3s forwards;
   }
 }
 
@@ -583,7 +572,7 @@ header .location i {
   cursor: pointer;
   transition: color 600ms linear;
 }
-#main-container main .restaurant-name .fa-heart:active {
+#main-container main .restaurant-name .fa-heart:hover {
   background: -webkit-linear-gradient(#9356dc, #ff79da);
   background: -moz-linear-gradient(#9356dc, #ff79da);
   background: linear-gradient(#9356dc, #ff79da);
@@ -668,17 +657,17 @@ header .location i {
   font-size: 13px;
   transition: transform 500ms;
 }
-#main-container main .sections-wrapper .card:active .fa-check-container {
+#main-container main .sections-wrapper .card:hover .fa-check-container {
   transform: translateX(-70px);
 }
-#main-container main .sections-wrapper .card:active .fa-check-container .fa-check {
+#main-container main .sections-wrapper .card:hover .fa-check-container .fa-check {
   transform: rotate(2turn);
 }
-#main-container main .sections-wrapper .card:active strong {
+#main-container main .sections-wrapper .card:hover strong {
   transform: translateX(-70px);
 }
-#main-container main .sections-wrapper .card:active h3,
-#main-container main .sections-wrapper .card:active p {
+#main-container main .sections-wrapper .card:hover h3,
+#main-container main .sections-wrapper .card:hover p {
   width: 60%;
 }
 #main-container main .sections-wrapper .animation-card1 {
@@ -856,12 +845,12 @@ header .location i {
     grid-gap: 25px;
     margin-right: 25px;
   }
-  #main-container main .card:active h3, #main-container main .card:active p {
+  #main-container main .card:hover h3, #main-container main .card:hover p {
     width: 50% !important;
   }
 }
 @media screen and (min-width: 1024px) {
-  #main-container main .card:active h3, #main-container main .card:active p {
+  #main-container main .card:hover h3, #main-container main .card:hover p {
     width: 60% !important;
   }
   #main-container main .card:hover .fa-check-container {
@@ -876,17 +865,6 @@ header .location i {
   #main-container main .card:hover h3,
 #main-container main .card:hover p {
     width: 60%;
-  }
-  #main-container main .fa-heart:hover {
-    background: -webkit-linear-gradient(#9356dc, #ff79da);
-    background: -moz-linear-gradient(#9356dc, #ff79da);
-    background: linear-gradient(#9356dc, #ff79da);
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    background-clip: text;
-    font-weight: 600;
-    color: transparent;
-    animation: scale 3s forwards;
   }
 }
 

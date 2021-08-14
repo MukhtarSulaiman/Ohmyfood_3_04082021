@@ -160,7 +160,6 @@ a {
 header {
 	width: 100%;
 	height: auto;
-
 	#logo {
 		@include flexbox;
 		height: 70px;
@@ -329,7 +328,8 @@ header {
 				right: 20px;
 				top: 20px;
 				transition: color 600ms linear;
-				&:active {
+				// pointer-events: none;
+				&:hover {
 					@include heart-active-hover;
 				}
 			}
@@ -355,9 +355,6 @@ header {
 			grid-gap: 25px;
 			.restaurant-list-group {
 				margin-bottom: 0px;
-				.fa-heart:hover {
-					@include heart-active-hover();
-				}
 			}
 		}
 	}
@@ -398,7 +395,7 @@ header {
 				font-size: 1.6rem;
 				cursor: pointer;
 				transition: color 600ms linear;
-				&:active {
+				&:hover {
 					@include heart-active-hover;
 				}
 			}
@@ -466,7 +463,7 @@ header {
 						}
 					}
 				}
-				&:active {
+				&:hover {
 					.fa-check-container {
 						transform: translateX(-70px);
 						.fa-check {
@@ -583,14 +580,14 @@ header {
 				grid-gap: 25px;
 				margin-right: 25px;
 			}
-			.card:active {
+			.card:hover {
 				h3,p {
 					width: 50% !important;
 				}
 			}
 		}
 		@media screen and (min-width: 1024px) {
-			.card:active {
+			.card:hover {
 				h3,p {
 					width: 60% !important;
 				}
@@ -608,11 +605,6 @@ header {
 				h3,
 				p {
 					width: 60%;
-				}
-			}
-			.fa-heart {
-				&:hover {
-					@include heart-active-hover;
 				}
 			}
 		}
