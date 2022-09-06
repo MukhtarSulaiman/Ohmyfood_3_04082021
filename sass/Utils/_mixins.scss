@@ -29,8 +29,8 @@
 	background-clip: text;
 	font-weight: 600;
 	color: transparent;
-	// transition: color 3s linear;
 	animation: scale 3s forwards;
+	// transition: color 3s linear;
 }
 @keyframes scale {
 	40% {
