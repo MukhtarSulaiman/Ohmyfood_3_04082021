@@ -573,16 +573,31 @@ header .location i {
   cursor: pointer;
   transition: color 600ms linear;
 }
-#main-container main .restaurant-name .fa-heart:hover, #main-container main .restaurant-name .fa-heart:active {
-  background: -webkit-linear-gradient(#9356dc, #ff79da);
-  background: -moz-linear-gradient(#9356dc, #ff79da);
-  background: linear-gradient(#9356dc, #ff79da);
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
-  font-weight: 600;
-  color: transparent;
-  animation: scale 3s forwards;
+@media (hover: hover) {
+  #main-container main .restaurant-name .fa-heart:hover {
+    background: -webkit-linear-gradient(#9356dc, #ff79da);
+    background: -moz-linear-gradient(#9356dc, #ff79da);
+    background: linear-gradient(#9356dc, #ff79da);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    font-weight: 600;
+    color: transparent;
+    animation: scale 3s forwards;
+  }
+}
+@media (hover: none) {
+  #main-container main .restaurant-name .fa-heart:hover {
+    background: -webkit-linear-gradient(#9356dc, #ff79da);
+    background: -moz-linear-gradient(#9356dc, #ff79da);
+    background: linear-gradient(#9356dc, #ff79da);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    font-weight: 600;
+    color: transparent;
+    animation: scale 3s forwards;
+  }
 }
 #main-container main .sections-wrapper h2 {
   margin-top: 35px;
@@ -658,19 +673,35 @@ header .location i {
   font-size: 13px;
   transition: transform 500ms;
 }
-#main-container main .sections-wrapper .card:hover .fa-check-container, #main-container main .sections-wrapper .card:active .fa-check-container {
-  transform: translateX(-70px);
+@media (hover: hover) {
+  #main-container main .sections-wrapper .card:hover .fa-check-container {
+    transform: translateX(-70px);
+  }
+  #main-container main .sections-wrapper .card:hover .fa-check-container .fa-check {
+    transform: rotate(2turn);
+  }
+  #main-container main .sections-wrapper .card:hover strong {
+    transform: translateX(-70px);
+  }
+  #main-container main .sections-wrapper .card:hover h3,
+#main-container main .sections-wrapper .card:hover p {
+    width: 60%;
+  }
 }
-#main-container main .sections-wrapper .card:hover .fa-check-container .fa-check, #main-container main .sections-wrapper .card:active .fa-check-container .fa-check {
-  transform: rotate(2turn);
-}
-#main-container main .sections-wrapper .card:hover strong, #main-container main .sections-wrapper .card:active strong {
-  transform: translateX(-70px);
-}
-#main-container main .sections-wrapper .card:hover h3,
-#main-container main .sections-wrapper .card:hover p, #main-container main .sections-wrapper .card:active h3,
-#main-container main .sections-wrapper .card:active p {
-  width: 60%;
+@media (hover: none) {
+  #main-container main .sections-wrapper .card:hover .fa-check-container {
+    transform: translateX(-70px);
+  }
+  #main-container main .sections-wrapper .card:hover .fa-check-container .fa-check {
+    transform: rotate(2turn);
+  }
+  #main-container main .sections-wrapper .card:hover strong {
+    transform: translateX(-70px);
+  }
+  #main-container main .sections-wrapper .card:hover h3,
+#main-container main .sections-wrapper .card:hover p {
+    width: 60%;
+  }
 }
 #main-container main .sections-wrapper .animation-card1 {
   animation: fadein 2s forwards;

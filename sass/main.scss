@@ -395,8 +395,16 @@ header {
 				font-size: 1.6rem;
 				cursor: pointer;
 				transition: color 600ms linear;
-				&:hover, &:active {
-					@include heart-on-hover;
+
+				@media(hover: hover) {
+					&:hover {
+						@include heart-on-hover;
+					}
+				  }
+				  @media(hover: none) {
+					&:hover {
+						@include heart-on-hover;
+					}
 				}
 			}
 		}
@@ -464,19 +472,38 @@ header {
 						}
 					}
 				}
-				&:hover, &:active {
-					.fa-check-container {
-						transform: translateX(-70px);
-						.fa-check {
-							transform: rotate(2turn);
+				@media(hover: hover) {
+					&:hover {
+						.fa-check-container {
+							transform: translateX(-70px);
+							.fa-check {
+								transform: rotate(2turn);
+							}
+						}
+						strong {
+							transform: translateX(-70px);
+						}
+						h3,
+						p {
+							width: 60% ;
 						}
 					}
-					strong {
-						transform: translateX(-70px);
-					}
-					h3,
-					p {
-						width: 60% ;
+				  }
+				  @media(hover: none) {
+					&:hover {
+						.fa-check-container {
+							transform: translateX(-70px);
+							.fa-check {
+								transform: rotate(2turn);
+							}
+						}
+						strong {
+							transform: translateX(-70px);
+						}
+						h3,
+						p {
+							width: 60% ;
+						}
 					}
 				}
 			}
